@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "homepage": "https://nero1342.github.io",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv docs/CNAME build && rm -rf docs && mv build docs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "eject": "react-scripts eject",
