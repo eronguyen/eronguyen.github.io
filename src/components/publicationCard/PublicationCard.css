@@ -1,0 +1,228 @@
+/* Ensure all links have no underline by default */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.publication-card {
+  display: flex;
+  flex-direction: "column";
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-family: "Google Sans Medium";
+  font-size: 18px;
+  /* width: 100%; */
+  /* color: #000000; */
+}
+
+.card-subtitle {
+  font-family: "Google Sans Medium";
+  font-size: 18px;
+  /* color: #000000; */
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.card2-img {
+  width: 400px;
+  height: auto;
+  /* border-radius: 50%; */
+  padding: 10px;
+  border: 1px solid #d9dbdf;
+  box-shadow: 5px 5px 5px #d9dbdf;
+  /* background-color: #6c63ff; */
+  /* background: transparent; */
+  /* margin-right: 20px; */
+}
+
+.body-header {
+  max-width: inherit;
+  display: flex;
+  /* width: 100%; */
+  /* background-color:#6c63ff99; */
+  border-radius: 7px 7px 0px 0px;
+  padding: 10px;
+}
+
+.body-header-title {
+  align-items: flex-start;
+}
+
+.body-content {
+  max-width: inherit;
+  /* width: 100%; */
+
+  font-family: "Google Sans Medium";
+  border-radius: 0px 0px px 7px;
+  padding: 10px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 5px 5px 5px #d3d3d3; */
+}
+
+.content-list {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Google Sans Regular";
+}
+
+.card-body {
+  /* background-color: #00FF00; */
+  border-bottom: 1px solid #d9dbdf;
+  border-left: 1px solid #d9dbdf;
+  border-right: 1px solid #d9dbdf;
+  border-radius: 7px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #d9dbdf;
+}
+
+.visit-btn {
+  /* background-color: #6c63ff99; */
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  float: right;
+}
+
+.visit-btn:hover {
+  /* background-color:#6c63ffcc; */
+}
+
+.btn {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Google Sans Regular";
+  /* color: #000000; */
+}
+
+@media (max-width: 1380px) {
+}
+
+@media (max-width: 768px) {
+  .publication-card {
+    flex-direction: column;
+  }
+
+  .body-header {
+    flex-direction: column;
+  }
+
+  .body-header-title {
+    width: 100%;
+  }
+
+  .body-header-duration {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .duration {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+  }
+
+  .card2-img {
+    width: 200px;
+    /* color: #d9dbdf; */
+  }
+
+  .card-body {
+    width: 100% !important;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Visit Project Page button */
+.button-project {
+  background-color: #6c63ff99; /* Fancy purple */
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-project:hover {
+  background-color: #5a52e699; /* Darker shade on hover */
+}
+
+/* Paper button */
+.button-paper {
+  background-color: #ff6f61cc; /* Fancy coral */
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-paper:hover {
+  background-color: #e55a4fcc; /* Darker coral on hover */
+}
+
+/* Code button */
+.button-code {
+  background-color: #43a047cc; /* Fancy green */
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-code:hover {
+  background-color: #388e3dcc; /* Darker green on hover */
+}
+
+/* Code type */
+.button-type {
+  background-color: #43a047cc; /* Fancy green */
+  color: white;
+  border: 0px;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px 10px 10px 0px;
+  width: 400px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button-code:hover {
+  background-color: #388e3dcc; /* Darker green on hover */
+}
+
+/* Highlighted author style */
+.highlighted-author {
+  color: #ff9800; /* Example color: orange */
+  font-weight: bold;
+}

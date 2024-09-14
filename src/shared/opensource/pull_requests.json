@@ -1,0 +1,767 @@
+{
+  "closed": 4,
+  "data": [
+    {
+      "id": "PR_kwDOHhNadM5XET5m",
+      "title": "Pseudomask",
+      "url": "https://github.com/nero1342/VLFormer/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2023-08-03T04:40:36Z",
+      "number": 1,
+      "changedFiles": 12,
+      "additions": 160,
+      "deletions": 111,
+      "baseRepository": {
+        "name": "VLFormer",
+        "url": "https://github.com/nero1342/VLFormer",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTUyNzU4Nzcw",
+      "title": "Add skip song button",
+      "url": "https://github.com/nero1342/Zikzok/pull/8",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2021-01-11T13:55:36Z",
+      "number": 8,
+      "changedFiles": 2,
+      "additions": 13,
+      "deletions": 18,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTUyNzQwNjQ5",
+      "title": "Fix bug can not turn off camera",
+      "url": "https://github.com/nero1342/Zikzok/pull/7",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2021-01-11T13:26:22Z",
+      "number": 7,
+      "changedFiles": 104,
+      "additions": 8,
+      "deletions": 1705,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTUyMjg5MzM3",
+      "title": "Add permission camera",
+      "url": "https://github.com/nero1342/Zikzok/pull/6",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2021-01-10T14:09:38Z",
+      "number": 6,
+      "changedFiles": 22,
+      "additions": 55,
+      "deletions": 37,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTQ0MjUwNDIz",
+      "title": "Nero",
+      "url": "https://github.com/nero1342/Zikzok/pull/5",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-12-22T17:05:52Z",
+      "number": 5,
+      "changedFiles": 100,
+      "additions": 478,
+      "deletions": 335,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTQ0MTM2OTc3",
+      "title": "Add auto get ZAK from server",
+      "url": "https://github.com/nero1342/Zikzok/pull/4",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-12-22T13:52:01Z",
+      "number": 4,
+      "changedFiles": 12,
+      "additions": 121,
+      "deletions": 47,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NTQzMDc3MDcz",
+      "title": "Add queue (local), create room + join room online",
+      "url": "https://github.com/nero1342/Zikzok/pull/3",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-12-20T14:35:05Z",
+      "number": 3,
+      "changedFiles": 38,
+      "additions": 512,
+      "deletions": 142,
+      "baseRepository": {
+        "name": "Zikzok",
+        "url": "https://github.com/nero1342/Zikzok",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NDkyMjU4Mzk5",
+      "title": "Merge branch 'khoa' of https://github.com/nero1342/CS426-MidtermProje…",
+      "url": "https://github.com/nero1342/CS426-Project-FindFind/pull/6",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-09-24T07:54:31Z",
+      "number": 6,
+      "changedFiles": 5,
+      "additions": 179,
+      "deletions": 15,
+      "baseRepository": {
+        "name": "CS426-Project-FindFind",
+        "url": "https://github.com/nero1342/CS426-Project-FindFind",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NDkyMTk3ODcx",
+      "title": "Merge branch 'khoa' of https://github.com/nero1342/CS426-MidtermProje…",
+      "url": "https://github.com/nero1342/CS426-Project-FindFind/pull/4",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-09-24T05:42:44Z",
+      "number": 4,
+      "changedFiles": 9,
+      "additions": 426,
+      "deletions": 36,
+      "baseRepository": {
+        "name": "CS426-Project-FindFind",
+        "url": "https://github.com/nero1342/CS426-Project-FindFind",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NDcyMTAxNTYw",
+      "title": "Nero",
+      "url": "https://github.com/nero1342/CS426-Project-FindFind/pull/3",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-08-23T09:51:40Z",
+      "number": 3,
+      "changedFiles": 12,
+      "additions": 188,
+      "deletions": 91,
+      "baseRepository": {
+        "name": "CS426-Project-FindFind",
+        "url": "https://github.com/nero1342/CS426-Project-FindFind",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NDcyMDcyNjg0",
+      "title": "Edit UI, semifinal",
+      "url": "https://github.com/nero1342/CS426-Project-FindFind/pull/2",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-08-23T04:34:10Z",
+      "number": 2,
+      "changedFiles": 7,
+      "additions": 59,
+      "deletions": 39,
+      "baseRepository": {
+        "name": "CS426-Project-FindFind",
+        "url": "https://github.com/nero1342/CS426-Project-FindFind",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0NDcyMDE1MTcz",
+      "title": "Nero",
+      "url": "https://github.com/nero1342/CS426-Project-FindFind/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2020-08-22T17:40:54Z",
+      "number": 1,
+      "changedFiles": 39,
+      "additions": 1068,
+      "deletions": 91,
+      "baseRepository": {
+        "name": "CS426-Project-FindFind",
+        "url": "https://github.com/nero1342/CS426-Project-FindFind",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzUzNDUyMTIx",
+      "title": "Obstacles sounds",
+      "url": "https://github.com/nero1342/CS202-18APCS1-Group07/pull/11",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-12-16T09:12:58Z",
+      "number": 11,
+      "changedFiles": 21,
+      "additions": 46,
+      "deletions": 62,
+      "baseRepository": {
+        "name": "CS202-18APCS1-Group07",
+        "url": "https://github.com/nero1342/CS202-18APCS1-Group07",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzUyOTQ0OTQ4",
+      "title": "TrafficLight",
+      "url": "https://github.com/nero1342/CS202-18APCS1-Group07/pull/9",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-12-13T15:52:41Z",
+      "number": 9,
+      "changedFiles": 5,
+      "additions": 47,
+      "deletions": 13,
+      "baseRepository": {
+        "name": "CS202-18APCS1-Group07",
+        "url": "https://github.com/nero1342/CS202-18APCS1-Group07",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzQ0MzY2NzEy",
+      "title": "Add menu and some functions support draw rectangle",
+      "url": "https://github.com/nero1342/CS202-18APCS1-Group07/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-11-22T06:13:18Z",
+      "number": 1,
+      "changedFiles": 9,
+      "additions": 219,
+      "deletions": 9,
+      "baseRepository": {
+        "name": "CS202-18APCS1-Group07",
+        "url": "https://github.com/nero1342/CS202-18APCS1-Group07",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+          "login": "nero1342",
+          "url": "https://github.com/nero1342"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAxNjEzNzE3",
+      "title": "??",
+      "url": "https://github.com/khoa3101/search-engine/pull/57",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2019-07-26T16:51:44Z",
+      "number": 57,
+      "changedFiles": 1,
+      "additions": 0,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAxNDg0OTk3",
+      "title": "Test",
+      "url": "https://github.com/khoa3101/search-engine/pull/50",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-26T10:26:50Z",
+      "number": 50,
+      "changedFiles": 10,
+      "additions": 45,
+      "deletions": 299,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAwOTU5MTM5",
+      "title": "Fix preview exacly '' ''",
+      "url": "https://github.com/khoa3101/search-engine/pull/39",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-25T02:35:01Z",
+      "number": 39,
+      "changedFiles": 4,
+      "additions": 263,
+      "deletions": 4,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAwOTU1NjMx",
+      "title": "Viewdoc + Previewdoc",
+      "url": "https://github.com/khoa3101/search-engine/pull/38",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-25T02:13:58Z",
+      "number": 38,
+      "changedFiles": 8,
+      "additions": 97,
+      "deletions": 26,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAwMjUyMjI0",
+      "title": "Show preview document when searching",
+      "url": "https://github.com/khoa3101/search-engine/pull/31",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-23T11:30:38Z",
+      "number": 31,
+      "changedFiles": 2,
+      "additions": 19,
+      "deletions": 1,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAwMjM2NzA0",
+      "title": "Nero",
+      "url": "https://github.com/khoa3101/search-engine/pull/30",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2019-07-23T10:49:29Z",
+      "number": 30,
+      "changedFiles": 24,
+      "additions": 145,
+      "deletions": 632,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk5NTQ5NzAy",
+      "title": "Trie Loading",
+      "url": "https://github.com/khoa3101/search-engine/pull/26",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2019-07-20T09:06:14Z",
+      "number": 26,
+      "changedFiles": 6,
+      "additions": 123,
+      "deletions": 22,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk5NTMwNjg0",
+      "title": "Add case minus operator",
+      "url": "https://github.com/khoa3101/search-engine/pull/23",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2019-07-20T02:38:50Z",
+      "number": 23,
+      "changedFiles": 4,
+      "additions": 84,
+      "deletions": 75,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk5MzU0MzMz",
+      "title": "NERO",
+      "url": "https://github.com/khoa3101/search-engine/pull/17",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-19T14:17:47Z",
+      "number": 17,
+      "changedFiles": 5,
+      "additions": 147,
+      "deletions": 27,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk5MTU1ODYx",
+      "title": "Edit ranking function + Destructor Trie",
+      "url": "https://github.com/khoa3101/search-engine/pull/12",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-19T02:00:16Z",
+      "number": 12,
+      "changedFiles": 10,
+      "additions": 53,
+      "deletions": 27,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4OTgxMzEy",
+      "title": "Test adding all text to trie",
+      "url": "https://github.com/khoa3101/search-engine/pull/11",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-18T15:53:40Z",
+      "number": 11,
+      "changedFiles": 11,
+      "additions": 156,
+      "deletions": 25,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4OTU2NzA5",
+      "title": "Testing",
+      "url": "https://github.com/khoa3101/search-engine/pull/10",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-18T15:01:20Z",
+      "number": 10,
+      "changedFiles": 9,
+      "additions": 42,
+      "deletions": 18,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4ODMzNjQx",
+      "title": "Nero",
+      "url": "https://github.com/khoa3101/search-engine/pull/7",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-18T09:42:49Z",
+      "number": 7,
+      "changedFiles": 2,
+      "additions": 16,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4MzIwMTk3",
+      "title": "Fix bug import Trie",
+      "url": "https://github.com/khoa3101/search-engine/pull/3",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-17T06:13:26Z",
+      "number": 3,
+      "changedFiles": 5,
+      "additions": 88,
+      "deletions": 2596,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4MjkwMzMw",
+      "title": "Move Trie to src",
+      "url": "https://github.com/khoa3101/search-engine/pull/2",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-17T03:26:40Z",
+      "number": 2,
+      "changedFiles": 5,
+      "additions": 11,
+      "deletions": 17,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    },
+    {
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk4Mjg4NDMy",
+      "title": "TRIE - Insert word, search word, import(bugging), export trie to file",
+      "url": "https://github.com/khoa3101/search-engine/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43778569?v=4",
+        "url": "https://github.com/nero1342",
+        "login": "nero1342"
+      },
+      "createdAt": "2019-07-17T03:15:21Z",
+      "number": 1,
+      "changedFiles": 5,
+      "additions": 2698,
+      "deletions": 1,
+      "baseRepository": {
+        "name": "search-engine",
+        "url": "https://github.com/khoa3101/search-engine",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/43779999?v=4",
+          "login": "khoa3101",
+          "url": "https://github.com/khoa3101"
+        }
+      }
+    }
+  ],
+  "merged": 27,
+  "open": 0,
+  "totalCount": 31
+}

@@ -1,0 +1,207 @@
+{
+  "closed": 8,
+  "data": [
+    {
+      "id": "I_kwDOJIOw-c5351qW",
+      "closed": false,
+      "title": "Question about Lang attn in RLA module?",
+      "createdAt": "2023-11-27T07:19:08Z",
+      "url": "https://github.com/henghuiding/ReLA/issues/19",
+      "number": 19,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "ReLA",
+        "url": "https://github.com/henghuiding/ReLA",
+        "owner": {
+          "login": "henghuiding",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/25579463?u=bb55c429c50c9d144f83efd8d839da2c3ddad6a2&v=4",
+          "url": "https://github.com/henghuiding"
+        }
+      }
+    },
+    {
+      "id": "I_kwDOJfD3R851piUh",
+      "closed": true,
+      "title": "About the transformer denoising blocks (TD) ",
+      "createdAt": "2023-11-02T09:17:04Z",
+      "url": "https://github.com/zhang-tao-whu/DVIS/issues/22",
+      "number": 22,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "DVIS",
+        "url": "https://github.com/zhang-tao-whu/DVIS",
+        "owner": {
+          "login": "zhang-tao-whu",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79845037?u=d12cb268119652b60aa0b50a4fc0d37bbf5d2e70&v=4",
+          "url": "https://github.com/zhang-tao-whu"
+        }
+      }
+    },
+    {
+      "id": "I_kwDOJFB-Vc5uioKB",
+      "closed": true,
+      "title": "Unclear in 'file_name' in grefs(unc).json file?",
+      "createdAt": "2023-08-17T09:01:52Z",
+      "url": "https://github.com/henghuiding/gRefCOCO/issues/1",
+      "number": 1,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "gRefCOCO",
+        "url": "https://github.com/henghuiding/gRefCOCO",
+        "owner": {
+          "login": "henghuiding",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/25579463?u=bb55c429c50c9d144f83efd8d839da2c3ddad6a2&v=4",
+          "url": "https://github.com/henghuiding"
+        }
+      }
+    },
+    {
+      "id": "I_kwDOJiZZKc5uEe28",
+      "closed": true,
+      "title": "Results without pretrained on external dataset.",
+      "createdAt": "2023-08-11T11:33:33Z",
+      "url": "https://github.com/amazon-science/polygon-transformer/issues/11",
+      "number": 11,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "polygon-transformer",
+        "url": "https://github.com/amazon-science/polygon-transformer",
+        "owner": {
+          "login": "amazon-science",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/70298811?v=4",
+          "url": "https://github.com/amazon-science"
+        }
+      }
+    },
+    {
+      "id": "I_kwDOGnJG_85bleic",
+      "closed": false,
+      "title": "Vision Language Early fusion ",
+      "createdAt": "2023-01-17T15:11:37Z",
+      "url": "https://github.com/wjn922/ReferFormer/issues/37",
+      "number": 37,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "ReferFormer",
+        "url": "https://github.com/wjn922/ReferFormer",
+        "owner": {
+          "login": "wjn922",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/21001460?u=7ebd937c60757bcd690f76f92ceed37c2cf7ac85&v=4",
+          "url": "https://github.com/wjn922"
+        }
+      }
+    },
+    {
+      "id": "I_kwDOGnJG_85J_aii",
+      "closed": true,
+      "title": "Training time for pre-training phase and main-training phase? ",
+      "createdAt": "2022-05-19T07:40:33Z",
+      "url": "https://github.com/wjn922/ReferFormer/issues/18",
+      "number": 18,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "ReferFormer",
+        "url": "https://github.com/wjn922/ReferFormer",
+        "owner": {
+          "login": "wjn922",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/21001460?u=7ebd937c60757bcd690f76f92ceed37c2cf7ac85&v=4",
+          "url": "https://github.com/wjn922"
+        }
+      }
+    },
+    {
+      "id": "MDU6SXNzdWU5ODc0NTg2NjQ=",
+      "closed": true,
+      "title": "Identification Embedding",
+      "createdAt": "2021-09-03T06:53:59Z",
+      "url": "https://github.com/z-x-yang/AOT/issues/4",
+      "number": 4,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "AOT",
+        "url": "https://github.com/z-x-yang/AOT",
+        "owner": {
+          "login": "z-x-yang",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/57658428?u=d2edd716e9b90c1e516e0ae6d20ff91c4a0298cb&v=4",
+          "url": "https://github.com/z-x-yang"
+        }
+      }
+    },
+    {
+      "id": "MDU6SXNzdWU5NDMwOTIwNDQ=",
+      "closed": true,
+      "title": "Does TPS improve the results? ",
+      "createdAt": "2021-07-13T09:52:49Z",
+      "url": "https://github.com/hkchengrex/STCN/issues/18",
+      "number": 18,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "STCN",
+        "url": "https://github.com/hkchengrex/STCN",
+        "owner": {
+          "login": "hkchengrex",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/7107196?u=c0e9ec354e5ffc24be68db8a7ae9f0973b730afc&v=4",
+          "url": "https://github.com/hkchengrex"
+        }
+      }
+    },
+    {
+      "id": "MDU6SXNzdWU5NDEzNzgyODA=",
+      "closed": true,
+      "title": "[Q] Custom number of columns in each Panel",
+      "createdAt": "2021-07-11T05:40:06Z",
+      "url": "https://github.com/wandb/wandb/issues/2382",
+      "number": 2382,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "wandb",
+        "url": "https://github.com/wandb/wandb",
+        "owner": {
+          "login": "wandb",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/26401354?v=4",
+          "url": "https://github.com/wandb"
+        }
+      }
+    },
+    {
+      "id": "MDU6SXNzdWU4NTE5NjA4MzM=",
+      "closed": true,
+      "title": "Pre-training on the BL30K dataset after pre-training on static images",
+      "createdAt": "2021-04-07T03:06:59Z",
+      "url": "https://github.com/hkchengrex/Mask-Propagation/issues/5",
+      "number": 5,
+      "assignees": {
+        "nodes": []
+      },
+      "repository": {
+        "name": "Mask-Propagation",
+        "url": "https://github.com/hkchengrex/Mask-Propagation",
+        "owner": {
+          "login": "hkchengrex",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/7107196?u=c0e9ec354e5ffc24be68db8a7ae9f0973b730afc&v=4",
+          "url": "https://github.com/hkchengrex"
+        }
+      }
+    }
+  ],
+  "open": 2,
+  "totalCount": 10
+}

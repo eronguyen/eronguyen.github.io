@@ -1,0 +1,25 @@
+.publications-header {
+  font-size: 40px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+@media (max-width: 1380px) {
+  .publications-header {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .publications-header {
+    font-size: 30px;
+  }
+}
+
+/* .publications-header {
+    font-size: 35px;
+  }
+.publications-header {
+  font-size: 30px;
+} */
