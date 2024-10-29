@@ -67,6 +67,33 @@ export default function Greeting(props) {
             <p></p>
           </div>
         </div>
+
+        <h1 className="skills-header" style={{ color: theme.text }}>
+          News
+        </h1>
+        <p
+          className="greeting-text-p subTitle"
+          style={{ color: theme.secondaryText, fontSize: "100%" }}
+        >
+          <ul>
+            <li>
+              <b>Oct 28th, 2024:</b> My first paper{" "}
+              <a
+                href="https://nero1342.github.io/VATEX_RIS/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fancy-link"
+              >
+                VATEX
+              </a>{" "}
+              has been accepted to WACV 2025. This is my first time I co-first
+              author in a top-tier CV conference. Cheers!!
+            </li>
+            <li>
+              <b>Aug 26th, 2024:</b> I start my Ph.D at Stony Brook University.
+            </li>
+          </ul>
+        </p>
       </div>
     </Fade>
   );

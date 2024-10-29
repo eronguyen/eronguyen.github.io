@@ -56,7 +56,7 @@ const greeting = {
         {" "}
         Prof. Minh-Triet Tran
       </a>{" "}
-      and worked as an Research Intern at{" "}
+      and was an Research Intern at{" "}
       <a
         href="https://vinai.io"
         target="_blank"

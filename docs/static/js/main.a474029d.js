@@ -43058,8 +43058,8 @@
             className: "button cvpr-btn",
             link: "https://cvpr.thecvf.com/",
           },
-          ICCV: {
-            className: "button iccv-btn",
+          WACV: {
+            className: "button wacv-btn",
             link: "https://iccv2023.thecvf.com/",
           },
           AAAI: { className: "button aaai-btn", link: "https://aaai.org/" },

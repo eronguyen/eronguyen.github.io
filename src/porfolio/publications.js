@@ -11,7 +11,7 @@ const publications = {
     {
       title:
         "Vision-Aware Text Features in Referring Image Segmentation: From Object Understanding to Context Understanding",
-      type: "arXiv",
+      type: "WACV",
       logo_path: "vatex.png",
       alt_name: "VATEX",
       authors: (
@@ -73,7 +73,7 @@ const publications = {
         </>
       ),
       descriptions: [
-        "⚡ Under Review in IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2025 ",
+        "⚡ IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2025 ",
       ],
       website_link: "https://nero1342.github.io/VATEX_RIS/",
       code_link: "https://github.com/nero1342/VATEX_RIS",
@@ -83,7 +83,7 @@ const publications = {
       title:
         "V-FIRST 2.0: Video Event Retrieval with Flexible Textual-Visual Intermediary for VBS 2023",
       type: "MMM",
-      logo_path: "vatex.png",
+      logo_path: "publications/V-First2.png",
       alt_name: "VFirst2.0",
       authors: (
         <>
@@ -126,7 +126,7 @@ const publications = {
       title:
         "Flexible Interactive Retrieval SysTem 3.0 for Visual Lifelog Exploration",
       type: "ICMR",
-      logo_path: "vatex.png",
+      logo_path: "publications/First3.png",
       alt_name: "FIRST3.0",
       authors: (
         <>
@@ -179,7 +179,7 @@ const publications = {
       title:
         "Visual-Language Transformer for Referring Video Object Segmentation",
       type: "CVPRW",
-      logo_path: "vatex.png",
+      logo_path: "publications/VLFormer.png",
       alt_name: "VLFormer",
       authors: (
         <p>
@@ -222,7 +222,7 @@ const publications = {
       title:
         "PointRend with Attention Fusion Refinement for Polyps Segmentation",
       type: "MediaEval",
-      logo_path: "vatex.png",
+      logo_path: "publications/Medico.png",
       alt_name: "Medico",
       authors: (
         <p>
@@ -256,13 +256,13 @@ const publications = {
         </p>
       ),
       descriptions: ["⚡ Medico task, MediaEval Benchmark, 2021"],
-      paper_link: "https://ceur-ws.org/Vol-3181/paper71.pdf",
+      paper_link: "https://ceur-ws.org/Vol-3181/paper31.pdf",
     },
     {
       title:
-        "PointRend with Attention Fusion Refinement for Polyps Segmentation",
+        "Attention-based Hierarchical Fusion Network for Predicting Media Memorability",
       type: "MediaEval",
-      logo_path: "vatex.png",
+      logo_path: "publications/Memorable.png",
       alt_name: "Medico",
       authors: (
         <p>
@@ -298,7 +298,7 @@ const publications = {
       descriptions: [
         "⚡ Predicting Media Memorability task, MediaEval Benchmark, 2021",
       ],
-      paper_link: "https://ceur-ws.org/Vol-3181/paper31.pdf",
+      paper_link: "https://ceur-ws.org/Vol-3181/paper71.pdf",
     },
   ],
 };

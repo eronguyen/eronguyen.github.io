@@ -51,11 +51,11 @@
 }
 
 /* ICCV button style */
-.iccv-btn {
+.wacv-btn {
   background-color: #ff9800;
 }
 
-.iccv-btn:hover {
+.wacv-btn:hover {
   background-color: #e65100;
 }
 

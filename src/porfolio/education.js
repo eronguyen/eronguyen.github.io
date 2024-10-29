@@ -23,6 +23,7 @@ const degrees = {
       duration: "2018 - 2022",
       descriptions: [
         "⚡ Advised by Prof. Minh-Triet Tran",
+        "⚡ Thesis title: Smart Interactive Retrieval of Visual Data via Semantic Understanding",
         "⚡ GPA: 3.94/4.0",
 
         // "⚡ I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",

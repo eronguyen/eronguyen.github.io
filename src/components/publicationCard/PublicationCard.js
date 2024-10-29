@@ -18,9 +18,9 @@ const conferenceClassMap = {
     className: "button cvpr-btn",
     link: "https://cvpr.thecvf.com/",
   },
-  ICCV: {
-    className: "button iccv-btn",
-    link: "https://iccv2023.thecvf.com/",
+  WACV: {
+    className: "button wacv-btn",
+    link: "https://wacv2025.thecvf.com/",
   },
   AAAI: {
     className: "button aaai-btn",
@@ -79,6 +79,7 @@ class PublicationCard extends Component {
                 <img
                   style={{
                     maxWidth: "100%",
+                    height: "auto",
                   }}
                   src={require(`../../assets/images/${publication.logo_path}`)}
                   alt={publication.alt_name}
