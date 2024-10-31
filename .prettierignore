@@ -1,0 +1,5 @@
+.github
+images
+node_modules
+public
+*.json
