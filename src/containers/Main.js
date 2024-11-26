@@ -52,6 +52,12 @@ export default class Main extends Component {
             )}
           />
           <Route
+            path="/awards"
+            render={(props) => (
+              <Publication {...props} theme={this.props.theme} />
+            )}
+          />
+          <Route
             path="/opensource"
             render={(props) => (
               <Opensource {...props} theme={this.props.theme} />

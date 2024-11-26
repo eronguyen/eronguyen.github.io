@@ -77,6 +77,18 @@ export default function Greeting(props) {
         >
           <ul>
             <li>
+              <b>Nov 24th, 2024:</b> My recent work{" "}
+              <a
+                href="https://nero1342.github.io/InstAlign/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fancy-link"
+              >
+                InstAlign
+              </a>{" "}
+              now on arXiv.
+            </li>
+            <li>
               <b>Oct 28th, 2024:</b> My first paper{" "}
               <a
                 href="https://nero1342.github.io/VATEX_RIS/"
@@ -86,11 +98,16 @@ export default function Greeting(props) {
               >
                 VATEX
               </a>{" "}
-              has been accepted to WACV 2025. This is my first time I co-first
-              author in a top-tier CV conference. Cheers!!
+              has been accepted to WACV 2025. This is my first time I was a
+              co-first author in a top-tier CV conference. Cheers!!
             </li>
             <li>
-              <b>Aug 26th, 2024:</b> I start my Ph.D at Stony Brook University.
+              <b>Aug 26th, 2024:</b> I started my Ph.D at Stony Brook
+              University.
+            </li>
+            <li>
+              <b>Mar 08th, 2024:</b> I received Ph.D scholarships from SBU and
+              RIT. My acceptance rate is 66.67%!
             </li>
           </ul>
         </p>

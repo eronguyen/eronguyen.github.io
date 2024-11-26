@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.61781205.css",
-    "main.js": "/static/js/main.a474029d.js",
+    "main.css": "/static/css/main.df6c088d.css",
+    "main.js": "/static/js/main.3647656d.js",
     "static/media/me.png": "/static/media/me.b57f542b19250f514e44.png",
     "static/media/portfolio.gif": "/static/media/portfolio.ed6c89f1485f23014ebd.gif",
     "static/media/me.jpg": "/static/media/me.2ad97cb6e1b3d969641e.jpg",
+    "static/media/VLFormer.png": "/static/media/VLFormer.38098aa401944ac80c38.png",
     "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.9fa614346b4e81decc62.svg",
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.6fcab609e2f62d5c3104.svg",
     "static/media/vatex.png": "/static/media/vatex.76d48ff1d57de633603c.png",
@@ -17,6 +18,8 @@
     "static/media/dsc_logo.png": "/static/media/dsc_logo.fdf993910e3f48d0cf30.png",
     "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.d93bcbbb0fbfad39d905.eot",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.aae41ea25bd0dde9f796.ttf",
+    "static/media/InstAlign.png": "/static/media/InstAlign.e5d4ad3f8988cf490f5e.png",
+    "static/media/Memorable.png": "/static/media/Memorable.41bd2a518b2f613f2a7b.png",
     "static/media/animated_ashutosh.png": "/static/media/animated_ashutosh.a6571aa6386520448027.png",
     "static/media/fa-regular-400.svg": "/static/media/fa-regular-400.4e8f9fa44f7ec7479c39.svg",
     "static/media/fa-brands-400.eot": "/static/media/fa-brands-400.b09f783b99c88d6989f7.eot",
@@ -39,10 +42,13 @@
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.4a83f63fd7dd55c4ca85.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.1c638e5f7632ea819e77.woff2",
     "static/media/iiitk_logo.png": "/static/media/iiitk_logo.170d558551a09a7d1620.png",
+    "static/media/V-First2.png": "/static/media/V-First2.79ea49706c292f95fe8d.png",
     "static/media/intel_logo.jpg": "/static/media/intel_logo.d7577f35a3dac4e5636d.jpg",
     "static/media/ui_ux_design.svg": "/static/media/ui_ux_design.42a2cdaf132097cc499e.svg",
     "static/media/scholar.svg": "/static/media/scholar.685298dc94dd105bb967.svg",
     "static/media/manOnTable.svg": "/static/media/manOnTable.f861b03b5a2d1a28c198.svg",
+    "static/media/Medico.png": "/static/media/Medico.d7054dd2c409381adcf6.png",
+    "static/media/First3.png": "/static/media/First3.37e8be91722b67189749.png",
     "static/media/muffito_logo.png": "/static/media/muffito_logo.a40e290031eaf389bde1.png",
     "static/media/deeplearning_ai_logo.png": "/static/media/deeplearning_ai_logo.f5e1bd288e7a2b30a390.png",
     "static/media/nptel_logo.png": "/static/media/nptel_logo.14bc947aebe4b57dd2bc.png",
@@ -73,11 +79,11 @@
     "static/media/googleAssistant.svg": "/static/media/googleAssistant.1c2312558eb2e5f04a45.svg",
     "static/media/talksCardBackAlt.svg": "/static/media/talksCardBackAlt.018d87225926eee9ccc3.svg",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.7dc8695e60efbc2baab8.svg",
-    "main.61781205.css.map": "/static/css/main.61781205.css.map",
-    "main.a474029d.js.map": "/static/js/main.a474029d.js.map"
+    "main.df6c088d.css.map": "/static/css/main.df6c088d.css.map",
+    "main.3647656d.js.map": "/static/js/main.3647656d.js.map"
   },
   "entrypoints": [
-    "static/css/main.61781205.css",
-    "static/js/main.a474029d.js"
+    "static/css/main.df6c088d.css",
+    "static/js/main.3647656d.js"
   ]
 }

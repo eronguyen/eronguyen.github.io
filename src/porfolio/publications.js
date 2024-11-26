@@ -9,6 +9,56 @@ import React from "react";
 const publications = {
   data: [
     {
+      title: "Instance-Aware Generalized Referring Expression Segmentation",
+      type: "arXiv",
+      logo_path: "publications/InstAlign.png",
+      alt_name: "InstAlign",
+      authors: (
+        <>
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlighted-author"
+          >
+            {" "}
+            E-Ro Nguyen
+          </a>
+          ,
+          <a
+            href="https://hieulem.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Hieu Le
+          </a>
+          ,
+          <a
+            href="https://www.cs.stonybrook.edu/people/faculty/dimitrissamaras"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Dimitris Samaras
+          </a>
+          ,
+          <a
+            href="http://michaelryoo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Michael Ryoo
+          </a>
+        </>
+      ),
+      descriptions: ["⚡ arXiv preprint, 2025"],
+      website_link: "https://eronguyen.me/InstAlign/",
+      code_link: "https://github.com/nero1342/InstAlign",
+      paper_link: "https://arxiv.org/pdf/2411.15087",
+    },
+    {
       title:
         "Vision-Aware Text Features in Referring Image Segmentation: From Object Understanding to Context Understanding",
       type: "WACV",
@@ -17,15 +67,6 @@ const publications = {
       authors: (
         <>
           <a
-            href="https://scholar.google.es/citations?user=D1ngwXoAAAAJ&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            Hai Nguyen-Truong*
-          </a>
-          ,
-          <a
             href="/home"
             target="_blank"
             rel="noopener noreferrer"
@@ -33,6 +74,15 @@ const publications = {
           >
             {" "}
             E-Ro Nguyen*
+          </a>
+          ,
+          <a
+            href="https://scholar.google.es/citations?user=D1ngwXoAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Hai Nguyen-Truong*
           </a>
           ,
           <a
@@ -74,6 +124,7 @@ const publications = {
       ),
       descriptions: [
         "⚡ IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2025 ",
+        "*: Equal contribution",
       ],
       website_link: "https://nero1342.github.io/VATEX_RIS/",
       code_link: "https://github.com/nero1342/VATEX_RIS",
@@ -93,7 +144,7 @@ const publications = {
             rel="noopener noreferrer"
           >
             {" "}
-            Nhat Hoang-Xuan*
+            Nhat Hoang-Xuan
           </a>
           ,
           <a
@@ -155,7 +206,7 @@ const publications = {
             className="highlighted-author"
           >
             {" "}
-            E-Ro Nguyen*
+            E-Ro Nguyen
           </a>
           , Thanh-Cong Le, Mai-Khiem Tran, Tu-Khiem Le, Van-Tu Ninh, Cathal
           Gurrin,
