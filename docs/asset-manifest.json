@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.df6c088d.css",
-    "main.js": "/static/js/main.3647656d.js",
+    "main.js": "/static/js/main.20af2835.js",
     "static/media/me.png": "/static/media/me.b57f542b19250f514e44.png",
     "static/media/portfolio.gif": "/static/media/portfolio.ed6c89f1485f23014ebd.gif",
     "static/media/me.jpg": "/static/media/me.2ad97cb6e1b3d969641e.jpg",
@@ -10,8 +10,11 @@
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.6fcab609e2f62d5c3104.svg",
     "static/media/vatex.png": "/static/media/vatex.76d48ff1d57de633603c.png",
     "static/media/vinai_logo.png": "/static/media/vinai_logo.956ec4052a0d6cce1009.png",
+    "static/media/DAWN.png": "/static/media/DAWN.59828c59d98207fdceca.png",
     "static/media/tiktok_logo.png": "/static/media/tiktok_logo.bf41765c122d4b0f3fee.png",
+    "static/media/CREX.png": "/static/media/CREX.12a2a166a3a479e90df0.png",
     "static/media/hcmus_logo.png": "/static/media/hcmus_logo.985c2c0908ba3d9ac7a3.png",
+    "static/media/LangToMo.png": "/static/media/LangToMo.3308a559add26da6652f.png",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/sbu_logo.png": "/static/media/sbu_logo.3512af58b1d4e6b60eaf.png",
     "static/media/iu_logo.png": "/static/media/iu_logo.5f44628376f5171bea0f.png",
@@ -55,6 +58,7 @@
     "static/media/gcp_logo.png": "/static/media/gcp_logo.63bb0649c9716d110b14.png",
     "static/media/fa-regular-400.eot": "/static/media/fa-regular-400.86ce78132c18df414d83.eot",
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.235a1aa30ba10c7d00d0.ttf",
+    "static/media/webpage.png": "/static/media/webpage.b88adbf13bc7946fedce.png",
     "static/media/legato_logo.png": "/static/media/legato_logo.227e72c7979187840ba3.png",
     "static/media/developerActivity.svg": "/static/media/developerActivity.967f31dad3158d5be07b.svg",
     "static/media/placeholder.svg": "/static/media/placeholder.967f31dad3158d5be07b.svg",
@@ -80,10 +84,10 @@
     "static/media/talksCardBackAlt.svg": "/static/media/talksCardBackAlt.018d87225926eee9ccc3.svg",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.7dc8695e60efbc2baab8.svg",
     "main.df6c088d.css.map": "/static/css/main.df6c088d.css.map",
-    "main.3647656d.js.map": "/static/js/main.3647656d.js.map"
+    "main.20af2835.js.map": "/static/js/main.20af2835.js.map"
   },
   "entrypoints": [
     "static/css/main.df6c088d.css",
-    "static/js/main.3647656d.js"
+    "static/js/main.20af2835.js"
   ]
 }
