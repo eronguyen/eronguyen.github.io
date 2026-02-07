@@ -9,6 +9,68 @@ import React from "react";
 const publications = {
   data: [
     {
+      title: "Pixel Motion Diffusion is What We Need for Robot Control",
+      type: "arXiv",
+      logo_path: "publications/DAWN.png",
+      alt_name: "DAWN",
+      authors: (
+        <>
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlighted-author"
+          >
+            {" "}
+            E-Ro Nguyen*
+          </a>
+          ,
+          <a
+            href="https://scholar.google.com/citations?user=HOCyXzsAAAAJ&hl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Yichi Zhang*
+          </a>
+          ,
+          <a
+            href="https://kahnchana.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Kanchana Ranasinghe
+          </a>
+          ,
+          <a
+            href="https://xxli.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Xiang Li
+          </a>
+          ,
+          <a
+            href="http://michaelryoo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Michael S. Ryoo
+          </a>
+        </>
+      ),
+      descriptions: [
+        "⚡ arXiv preprint, 2025",
+        "*: Equal contribution",
+      ],
+      website_link: "https://nero1342.github.io/DAWN/",
+      code_link: "https://github.com/nero1342/DAWN",
+      paper_link: "https://arxiv.org/pdf/2509.22652",
+    },
+    {
       title: "Instance-Aware Generalized Referring Expression Segmentation",
       type: "arXiv",
       logo_path: "publications/InstAlign.png",
@@ -49,7 +111,7 @@ const publications = {
             rel="noopener noreferrer"
           >
             {" "}
-            Michael Ryoo
+            Michael S. Ryoo
           </a>
         </>
       ),
@@ -57,6 +119,140 @@ const publications = {
       website_link: "https://eronguyen.me/InstAlign/",
       code_link: "https://github.com/nero1342/InstAlign",
       paper_link: "https://arxiv.org/pdf/2411.15087",
+    },
+    {
+      title: "Improving Contrastive Learning for Referring Expression Counting",
+      type: "arXiv",
+      logo_path: "publications/CREX.png",
+      alt_name: "CREX",
+      authors: (
+        <>
+          <a
+            href="https://kostino.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Kostas Triaridis
+          </a>
+          ,<a
+            href="https://pkaliosis.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Panagiotis Kaliosis
+          </a>
+          ,
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlighted-author"
+          >
+            {" "}
+            E-Ro Nguyen
+          </a>
+          ,
+          <a
+            href="https://jingyixu.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Jingyi Xu
+          </a>
+          ,
+          <a
+            href="https://hieulem.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Hieu Le
+          </a>
+          ,
+          <a
+            href="https://www.cs.stonybrook.edu/people/faculty/dimitrissamaras"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Dimitris Samaras
+          </a>
+        </>
+      ),
+      descriptions: ["⚡ arXiv preprint, 2025"],
+      website_link: "https://eronguyen.me/",
+      code_link: "https://github.com/nero1342/",
+      paper_link: "https://arxiv.org/pdf/2505.22850",
+    },
+    {
+      title: "Pixel Motion as Universal Representation for Robot Control",
+      type: "arXiv",
+      logo_path: "publications/LangToMo.png",
+      alt_name: "LTM",
+      authors: (
+        <>
+          <a
+            href="https://kahnchana.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Kanchana Ranasinghe
+          </a>
+          ,<a
+            href="https://xxli.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Xiang Li
+          </a>
+          ,
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlighted-author"
+          >
+            {" "}
+            E-Ro Nguyen
+          </a>
+          ,
+          <a
+            href="https://cfmata.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Cristina Mata
+          </a>
+          ,
+          <a
+            href="https://scholar.google.com/citations?user=qIn5k_sAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Jongwoo Park
+          </a>
+          ,
+          <a
+            href="http://michaelryoo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Michael S. Ryoo
+          </a>
+        </>
+      ),
+      descriptions: ["⚡ arXiv preprint, 2025"],
+      website_link: "https://kahnchana.github.io/LangToMo/",
+      code_link: "https://github.com/kahnchana/LangToMo",
+      paper_link: "https://arxiv.org/abs/2505.07817",
     },
     {
       title:

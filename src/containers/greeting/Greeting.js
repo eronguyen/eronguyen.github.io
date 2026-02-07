@@ -76,8 +76,20 @@ export default function Greeting(props) {
           style={{ color: theme.secondaryText, fontSize: "100%" }}
         >
           <ul>
+          <li>
+              <b>Sep 26th, 2025:</b> My recent work{" "}
+              <a
+                href="https://nero1342.github.io/DAWN/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fancy-link"
+              >
+                DAWN
+              </a>{" "}
+              now on arXiv.
+            </li>
             <li>
-              <b>Nov 24th, 2024:</b> My recent work{" "}
+              <b>Nov 24th, 2024:</b> {" "}
               <a
                 href="https://nero1342.github.io/InstAlign/"
                 target="_blank"

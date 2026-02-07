@@ -7,8 +7,11 @@ import DataScienceImg from "./DataScienceImg";
 import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
 import DesignImg from "./DesignImg";
+import DAWNImg from "./DAWNImg";
 
 function GetSkillSvg(props) {
+  if (props.fileName === "DAWNImg") 
+    return <DAWNImg theme={props.theme} />;
   if (props.fileName === "DataScienceImg")
     return <DataScienceImg theme={props.theme} />;
   else if (props.fileName === "FullStackImg")
