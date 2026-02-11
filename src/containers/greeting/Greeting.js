@@ -79,7 +79,7 @@ export default function Greeting(props) {
           <li>
               <b>Sep 26th, 2025:</b> My recent work{" "}
               <a
-                href="https://nero1342.github.io/DAWN/"
+                href="https://eronguyen.github.io/DAWN/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fancy-link"
@@ -91,7 +91,7 @@ export default function Greeting(props) {
             <li>
               <b>Nov 24th, 2024:</b> {" "}
               <a
-                href="https://nero1342.github.io/InstAlign/"
+                href="https://eronguyen.github.io/InstAlign/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fancy-link"
@@ -103,7 +103,7 @@ export default function Greeting(props) {
             <li>
               <b>Oct 28th, 2024:</b> My first paper{" "}
               <a
-                href="https://nero1342.github.io/VATEX_RIS/"
+                href="https://vatex.hkustvgd.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fancy-link"

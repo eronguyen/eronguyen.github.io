@@ -8,7 +8,7 @@ const greeting = {
   subTitle: (
     <>
       <p>
-        I am currently a first-year CS Ph.D. student at{" "}
+        I am currently a second-year CS Ph.D. student at{" "}
         <a
           href="https://www.cs.stonybrook.edu/"
           target="_blank"
@@ -63,7 +63,7 @@ const greeting = {
         rel="noopener noreferrer"
         className="fancy-link2"
       >
-        Qualcomm AI Research
+        Qualcomm AI Research (former VinAI Research)
       </a>
       , advised by{" "}
       <a
