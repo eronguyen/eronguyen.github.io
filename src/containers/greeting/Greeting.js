@@ -34,7 +34,7 @@ export default function Greeting(props) {
                   text="⭐ Check out my Resume ⭐"
                   newTab={true}
                   // href={greeting.resumeLink}
-                  href="/resume.pdf"
+                  href="https://drive.google.com/file/d/1I2KV3iM4CkpsEbaeMkkDvOc1s1T78Msp/view?usp=drive_link"
                   theme={theme}
                   className="portfolio-repo-btn"
                 />
@@ -76,6 +76,18 @@ export default function Greeting(props) {
           style={{ color: theme.secondaryText, fontSize: "100%" }}
         >
           <ul>
+          <li>
+              <b>Feb 21th, 2026:</b> {" "}
+              <a
+                href="https://eronguyen.github.io/DAWN/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fancy-link"
+              >
+                DAWN
+              </a>{" "}
+              has been accepted to CVPR 2026.
+            </li>
           <li>
               <b>Sep 26th, 2025:</b> My recent work{" "}
               <a

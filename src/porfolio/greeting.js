@@ -37,45 +37,50 @@ const greeting = {
         </a>
         .
       </p>
-      Prior that, I am obtained my B.Sc at{" "}
-      <a
-        href="https://hcmus.edu.vn"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fancy-link2"
-      >
-        University of Science - VNU-HCM, Vietnam
-      </a>{" "}
-      advised by{" "}
-      <a
-        href="https://scholar.google.com/citations?user=lt2ATkkAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fancy-link"
-      >
-        {" "}
-        Prof. Minh-Triet Tran
-      </a>{" "}
-      and was an Research Intern at{" "}
-      <a
-        href="https://www.qualcomm.com/research/artificial-intelligence/ai-residency-program"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fancy-link2"
-      >
-        Qualcomm AI Research (former VinAI Research)
-      </a>
-      , advised by{" "}
-      <a
-        href="https://researchers.adelaide.edu.au/profile/minhhoai.nguyen"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fancy-link"
-      >
-        {" "}
-        Prof. Minh Hoai
-      </a>
-      .
+      <p>
+        Prior that, I am obtained my B.Sc at{" "}
+        <a
+          href="https://hcmus.edu.vn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fancy-link2"
+        >
+          University of Science - VNU-HCM, Vietnam
+        </a>{" "}
+        advised by{" "}
+        <a
+          href="https://scholar.google.com/citations?user=lt2ATkkAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fancy-link"
+        >
+          {" "}
+          Prof. Minh-Triet Tran
+        </a>{" "}
+        and was an Research Intern at{" "}
+        <a
+          href="https://www.qualcomm.com/research/artificial-intelligence/ai-residency-program"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fancy-link2"
+        >
+          Qualcomm AI Research (former VinAI Research)
+        </a>
+        , advised by{" "}
+        <a
+          href="https://researchers.adelaide.edu.au/profile/minhhoai.nguyen"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fancy-link"
+        >
+          {" "}
+          Prof. Minh Hoai
+        </a>
+        .
+      </p>
+      <p>
+      My primary research focus lies in vision-language understanding and robotics learning. 
+      </p>
     </>
   ),
   resumeLink:

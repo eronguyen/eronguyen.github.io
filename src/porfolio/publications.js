@@ -10,7 +10,8 @@ const publications = {
   data: [
     {
       title: "Pixel Motion Diffusion is What We Need for Robot Control",
-      type: "arXiv",
+      type: "CVPR",
+      // year: "2026",
       logo_path: "publications/DAWN.png",
       alt_name: "DAWN",
       authors: (
@@ -63,12 +64,14 @@ const publications = {
         </>
       ),
       descriptions: [
-        "⚡ arXiv preprint, 2025",
+        "⚡ IEEE/CVF Conference on Computer Vision & Pattern Recognition, 2026",
+        "⚡ We present DAWN🌅, a unified diffusion-based framework for language-conditioned robotic manipulation that bridges high-level motion intent and low-level robot action via structured pixel motion representation.",
+        "⚡ Instead of predicting actions directly, we model dense pixel motion as the core representation connecting perception, language, and control.",
         "*: Equal contribution",
       ],
-      website_link: "https://nero1342.github.io/DAWN/",
-      code_link: "https://github.com/nero1342/DAWN",
-      paper_link: "https://arxiv.org/pdf/2509.22652",
+      website_link: "https://eronguyen.github.io/DAWN/",
+      code_link: "https://github.com/eronguyen/DAWN",
+      paper_link: "https://arxiv.org/abs/2509.22652",
     },
     {
       title: "Instance-Aware Generalized Referring Expression Segmentation",
