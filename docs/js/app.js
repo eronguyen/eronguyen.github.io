@@ -413,7 +413,25 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeWriter, 1000);
     }
 
-    // 9. Tracking Page Live Data
+    // 9. Footer Last-Modified Stamp
+    const footerParagraph = document.querySelector('footer p');
+    if (footerParagraph && document.lastModified) {
+        const modifiedDate = new Date(document.lastModified);
+        if (!Number.isNaN(modifiedDate.getTime())) {
+            const formatted = modifiedDate.toLocaleString([], {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            const stamp = document.createElement('span');
+            stamp.innerHTML = `<br>Last updated: ${formatted}`;
+            footerParagraph.appendChild(stamp);
+        }
+    }
+
+    // 10. Tracking Page Live Data
     const trackingSection = document.getElementById('tracking');
     if (trackingSection) {
         const githubUser = (trackingSection.getAttribute('data-github-user') || 'nero1342').trim();
