@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ro Nguyen | Experience</title>
+    <meta name="description" content="Research experience of E-Ro Nguyen."/>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .research-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./" class="logo text-gradient" style="display: flex; align-items: center; gap: 0.8rem;">
+                <img src="images/me.png" alt="E-Ro"
+                    style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;"
+                    onerror="this.style.display='none'">
+                <span style="font-size: 1.1rem; text-transform: none; letter-spacing: 0;">E-Ro Nguyen</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="publication.html">Publications</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <span>Night</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="research-header" style="margin-top: 2rem;">
+            <h1 class="text-gradient">Experience</h1>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto 0;">
+                Research appointments in computer vision, multimodal learning, and robot learning.
+            </p>
+        </div>
+
+        <section class="section reveal active" id="experience" style="padding-top: 0;">
+            <div class="education-timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="images/experience/sbu.png" alt="Stony Brook University Logo"
+                            style="max-height: 85%; max-width: 85%;">
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-header">
+                            <div>
+                                <h3 class="school-name">SUNY Stony Brook</h3>
+                                <p class="degree-name">Graduate Research Assistant</p>
+                            </div>
+                            <div class="date-badge">Aug 2024 - Present</div>
+                        </div>
+                        <div class="education-card-body">
+                            <ul>
+                                <li><i class="fas fa-bolt text-teal"></i> Advised by Prof. Michael Ryoo and Prof. Dimitris Samaras.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Focus: computer vision and multimodal learning for language-conditioned robot control.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Topics: motion-centric representations, diffusion-based visuomotor policies, referring segmentation.</li>
+                            </ul>
+                            <a href="https://www.cs.stonybrook.edu/" target="_blank" class="visit-btn">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="images/experience/hcmus.png" alt="HCMUS Logo">
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-header">
+                            <div>
+                                <h3 class="school-name">SeLab, University of Science - VNU-HCM</h3>
+                                <p class="degree-name">Research Assistant</p>
+                            </div>
+                            <div class="date-badge">Feb 2022 - Sep 2023</div>
+                        </div>
+                        <div class="education-card-body">
+                            <ul>
+                                <li><i class="fas fa-bolt text-teal"></i> Advised by Prof. Minh-Triet Tran.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Focused on referring expression segmentation, visual life-logging, and video object segmentation.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Built systems for retrieval and multimodal understanding in large visual datasets.</li>
+                            </ul>
+                            <a href="https://selab.hcmus.edu.vn/" target="_blank" class="visit-btn">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="images/experience/qualcomm.png" alt="Qualcomm AI Research Logo"
+                            style="max-height: 85%; max-width: 85%;">
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-header">
+                            <div>
+                                <h3 class="school-name">Qualcomm AI Research (former VinAI Research)</h3>
+                                <p class="degree-name">Research Intern</p>
+                            </div>
+                            <div class="date-badge">May 2021 - Feb 2022</div>
+                        </div>
+                        <div class="education-card-body">
+                            <ul>
+                                <li><i class="fas fa-bolt text-teal"></i> Advised by Prof. Minh Hoai.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Researched semi-supervised video object segmentation and related video understanding tasks.</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Reproduced and improved prior state-of-the-art pipelines with faster inference.</li>
+                            </ul>
+                            <a href="https://www.qualcomm.com/research/artificial-intelligence" target="_blank" class="visit-btn">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Ro Nguyen. Built with HTML, CSS & JS.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

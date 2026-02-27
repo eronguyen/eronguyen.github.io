@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ro Nguyen | Education</title>
+    <meta name="description" content="Education background of E-Ro Nguyen."/>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .research-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            background: rgba(15, 23, 42, 0.5);
+            color: var(--text-primary);
+            font-size: 1rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .research-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .research-item {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .research-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .res-image-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+
+        .res-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Don't crop medical or complex graphs */
+        }
+
+        .res-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(15, 23, 42, 0.85);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+        }
+
+        .res-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .res-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .res-authors {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .res-authors strong {
+            color: var(--accent-pink);
+        }
+
+        .res-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .res-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .res-tag {
+            background: rgba(192, 132, 252, 0.1);
+            color: #d8b4fe;
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .res-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .res-link {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .res-link-primary {
+            background: var(--accent-blue);
+            color: #0f172a;
+        }
+
+        .res-link-primary:hover {
+            background: #7dd3fc;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .res-link-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+        }
+
+        .res-link-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .research-item {
+                grid-template-columns: 1fr;
+            }
+
+            .res-image-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./" class="logo text-gradient" style="display: flex; align-items: center; gap: 0.8rem;">
+                <img src="images/me.png" alt="Hai"
+                    style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;"
+                    onerror="this.style.display='none'">
+                <span style="font-size: 1.1rem; text-transform: none; letter-spacing: 0;">E-Ro Nguyen</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./">About</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="publication.html">Publications</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <span>Night</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="research-header" style="margin-top: 2rem;">
+            <h1 class="text-gradient">Education</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto 0;">
+                My academic journey in Computer Science.
+            </p>
+        </div>
+
+        <section class="section reveal active" id="education" style="padding-top: 0;">
+                        <div class="education-timeline">
+
+                <!-- Stony Brook -->
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="images/education/sbu.png" alt="Stony Brook University Logo"
+                            style="max-height: 85%; max-width: 85%;">
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-header">
+                            <div>
+                                <h3 class="school-name">Stony Brook University</h3>
+                                <p class="degree-name">Ph.D. in Computer Science</p>
+                            </div>
+                            <div class="date-badge">2024 - 2029 (expected)</div>
+                        </div>
+                        <div class="education-card-body">
+                            <ul>
+                                <li><i class="fas fa-bolt text-teal"></i> Advised by Prof. Michael Ryoo & Prof. Dimitris Samaras</li>
+                                <li><i class="fas fa-bolt text-teal"></i> Research: Vision-Language understanding, Robotics learning</li>
+                            </ul>
+                            <a href="https://www.stonybrook.edu/" target="_blank" class="visit-btn">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HCMUS -->
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="images/education/hcmus.png" alt="HCMUS Logo">
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-header">
+                            <div>
+                                <h3 class="school-name">University of Science, VNU-HCM</h3>
+                                <p class="degree-name">B.Sc. in Computer Science</p>
+                            </div>
+                            <div class="date-badge">2018 - 2022</div>
+                        </div>
+                        <div class="education-card-body">
+                            <ul>
+                                <li><i class="fas fa-bolt text-teal"></i> Undergraduate research in computer vision & VLMs</li>
+                            </ul>
+                            <a href="https://www.hcmus.edu.vn/" target="_blank" class="visit-btn">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Ro Nguyen. Built with HTML, CSS & JS.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
