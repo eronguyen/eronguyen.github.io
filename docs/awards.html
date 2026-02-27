@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <title>E-Ro Nguyen | Awards</title>
+    <meta name="description" content="Awards, scholarships, fellowships, and competitions of E-Ro Nguyen.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .awards-header {
+            text-align: center;
+            margin-bottom: 2.2rem;
+        }
+
+        .award-section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .award-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .award-item {
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            background: var(--glass-bg);
+            padding: 1rem 1.05rem;
+            display: grid;
+            grid-template-columns: 54px 1fr;
+            gap: 0.9rem;
+            align-items: start;
+        }
+
+        .award-logo {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .award-logo img {
+            width: 86%;
+            height: 86%;
+            object-fit: contain;
+        }
+
+        .award-logo i {
+            font-size: 1.2rem;
+            color: #0ea5e9;
+        }
+
+        .award-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.3rem;
+        }
+
+        .award-title {
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .award-org-inline {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .award-date {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .award-org {
+            color: var(--text-secondary);
+            font-size: 0.94rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .award-desc {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .award-item {
+                grid-template-columns: 46px 1fr;
+                gap: 0.75rem;
+                padding: 0.9rem;
+            }
+
+            .award-logo {
+                width: 46px;
+                height: 46px;
+            }
+        }
+
+        html[data-theme="dark"] .award-item {
+            background: rgba(17, 26, 44, 0.72);
+            border-color: rgba(148, 163, 184, 0.22);
+        }
+
+        html[data-theme="dark"] .award-logo {
+            background: #ffffff;
+            border-color: rgba(148, 163, 184, 0.22);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./" class="logo text-gradient" style="display: flex; align-items: center; gap: 0.8rem;">
+                <img src="images/me.png" alt="E-Ro"
+                    style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;"
+                    onerror="this.style.display='none'">
+                <span style="font-size: 1.1rem; text-transform: none; letter-spacing: 0;">E-Ro Nguyen</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="publication.html">Publications</a></li>
+                <li><a href="awards.html" class="active">Awards</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <span>Night</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section reveal active particle-section" id="awards" style="position: relative; overflow: visible;">
+            <canvas class="hero-particles"
+                style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+            <div class="awards-header" style="margin-top: 2rem;">
+                <h1 class="text-gradient">Awards</h1>
+                <p style="color: var(--text-muted); max-width: 760px; margin: 1rem auto 0;">
+                    Scholarships, fellowships, and competition achievements.
+                </p>
+            </div>
+
+            <h2 class="award-section-title"><i class="fas fa-graduation-cap text-teal"></i> Academic (Scholarships +
+                Fellowships)</h2>
+            <div class="award-grid">
+                <article class="award-item">
+                    <div class="award-logo">
+                        <img src="images/experience/sbu.png" alt="SBU logo" onerror="this.parentElement.innerHTML='<i class=&quot;fas fa-trophy&quot;></i>'">
+                    </div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">John Hennessy Fellowship (Selected) <span class="award-org-inline">@ Stony Brook University</span></h3>
+                        <span class="award-date">2024</span>
+                    </div>
+                    <p class="award-desc">Selected for the John Hennessy Fellowship during Ph.D. studies.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo">
+                        <img src="images/experience/sbu.png" alt="SBU logo" onerror="this.parentElement.innerHTML='<i class=&quot;fas fa-trophy&quot;></i>'">
+                    </div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">CS Research Assistantship <span class="award-org-inline">@ Stony Brook University, NY, USA</span></h3>
+                        <span class="award-date">2024</span>
+                    </div>
+                    <p class="award-desc">Research assistantship support for Ph.D. studies in Computer Science.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/ai_hcmc.jpeg" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Excellent Student in Artificial Intelligence <span class="award-org-inline">@ Ho Chi Minh City, Vietnam</span></h3>
+                        <span class="award-date">2020</span>
+                    </div>
+                    <p class="award-desc">Recognized as an excellent student in Artificial Intelligence.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo">
+                        <img src="images/experience/hcmus.png" alt="VNU-HCM logo" onerror="this.parentElement.innerHTML='<i class=&quot;fas fa-trophy&quot;></i>'">
+                    </div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Scholarship for Excellent Student <span class="award-org-inline">@ University of Science, VNU-HCM</span></h3>
+                        <span class="award-date">2020</span>
+                    </div>
+                    <p class="award-desc">Merit scholarship for outstanding academic performance.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/education/hcmus.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Full-year Scholarship for Freshman <span class="award-org-inline">@ University of Science, VNU-HCM</span></h3>
+                        <span class="award-date">2018</span>
+                    </div>
+                    <p class="award-desc">Received full-year freshman scholarship support.</p>
+                    </div>
+                </article>
+
+                
+            </div>
+
+            <h2 class="award-section-title"><i class="fas fa-trophy text-teal"></i> Competitions</h2>
+            <div class="award-grid">
+                <article class="award-item">
+            
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Top 13 at 2024 ICPC Greater New York Regional Contest <span class="award-org-inline">@ ICPC</span></h3>
+                        <span class="award-date">2024</span>
+                    </div>
+                    <p class="award-desc">Placed among top teams in the Greater New York Regional Contest.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/meta.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Top 300 at Meta Hacker Cup <span class="award-org-inline">@ Meta Hacker Cup</span></h3>
+                        <span class="award-date">2024</span>
+                    </div>
+                    <p class="award-desc"><a href="https://www.facebook.com/codingcompetitions/hacker-cup/2024/certificate/899596073879591" target="_blank" rel="noreferrer">Certificate</a></p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo">
+                        <img src="images/experience/sbu.png" alt="SBU logo" onerror="this.parentElement.innerHTML='<i class=&quot;fas fa-trophy&quot;></i>'">
+                    </div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Champion at SBU ICPC Team Selection <span class="award-org-inline">@ Stony Brook University</span></h3>
+                        <span class="award-date">2024</span>
+                    </div>
+                    <p class="award-desc">Won the internal ICPC team selection contest.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/cvpr.jpg" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Sixth Place at 4th Large-scale Video Object Segmentation Challenge <span class="award-org-inline">@ CVPR Workshops Challenge</span></h3>
+                        <span class="award-date">2022</span>
+                    </div>
+                    <p class="award-desc">Referring Video Object Segmentation track.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Fourth Place at 2021 ICPC Asia Hanoi Regional Contest <span class="award-org-inline">@ ICPC Asia Regional</span></h3>
+                        <span class="award-date">2022</span>
+                    </div>
+                    <p class="award-desc">Achieved fourth place at the Asia Hanoi Regional Contest.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Champion at 2021 ICPC National Vietnam Contest <span class="award-org-inline">@ ICPC Vietnam National</span></h3>
+                        <span class="award-date">2022</span>
+                    </div>
+                    <p class="award-desc">Won the ICPC National Vietnam Contest.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/meta.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Top 62 at Facebook Hacker Cup <span class="award-org-inline">@ Facebook Hacker Cup</span></h3>
+                        <span class="award-date">2021</span>
+                    </div>
+                    <p class="award-desc"><a href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/certificate/899596073879591" target="_blank" rel="noreferrer">Certificate</a></p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/trophy.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">First Prize at Student Scientific Research Award <span class="award-org-inline">@ Ho Chi Minh City</span></h3>
+                        <span class="award-date">2022</span>
+                    </div>
+                    <p class="award-desc">Received first prize in city-level student scientific research awards.
+                        <a href="https://en.hcmus.edu.vn/groups-of-authors-s-achievements-at-the-24th-eureka-award-in-2022/">Link</a>
+                    </p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/ai_hcmc.jpeg" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">First Prize at Ho Chi Minh City AI Challenge <span class="award-org-inline">@ Ho Chi Minh City AI Challenge</span></h3>
+                        <span class="award-date">2021</span>
+                    </div>
+                    <p class="award-desc">Won first prize in the 2021 AI Challenge.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/cvpr.jpg" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Fourth and Sixth Place at DAVIS Challenge on Video Object Segmentation <span class="award-org-inline">@ CVPR Workshops Challenge</span></h3>
+                        <span class="award-date">2020</span>
+                    </div>
+                    <p class="award-desc">Placed fourth and sixth across DAVIS challenge tracks.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Sixth Place at ICPC Asia Cantho Regional Contest <span class="award-org-inline">@ ICPC Asia Regional</span></h3>
+                        <span class="award-date">2020</span>
+                    </div>
+                    <p class="award-desc">Placed sixth in the ICPC Asia Cantho Regional.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Bronze Medal at ICPC Asia Danang Regional Contest <span class="award-org-inline">@ ICPC Asia Regional</span></h3>
+                        <span class="award-date">2020</span>
+                    </div>
+                    <p class="award-desc">Received bronze medal at the Danang Regional.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/scpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Fourth Prize at Samsung Collegiate Programming Cup <span class="award-org-inline">@ Samsung Collegiate Programming Cup</span></h3>
+                        <span class="award-date">2019</span>
+                    </div>
+                    <p class="award-desc">Placed fourth in the national programming cup competition.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Bronze Medal at ICPC Asia Hanoi Regional Contest <span class="award-org-inline">@ ICPC Asia Regional</span></h3>
+                        <span class="award-date">2018</span>
+                    </div>
+                    <p class="award-desc">Received bronze medal at the Hanoi Regional.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/icpc.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Bronze Medal at ICPC Asia Yangon Regional Contest <span class="award-org-inline">@ ICPC Asia Regional</span></h3>
+                        <span class="award-date">2018</span>
+                    </div>
+                    <p class="award-desc">Received bronze medal at the Yangon Regional.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/trophy.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Represented Vietnam at Asia-Pacific Informatics Olympiad (APIO), Russia <span class="award-org-inline">@ APIO</span></h3>
+                        <span class="award-date">2018</span>
+                    </div>
+                    <p class="award-desc">Represented Vietnam in APIO international competition.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/trophy.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Second Prize at Vietnam Olympiad in Informatics <span class="award-org-inline">@ Vietnam Olympiad in Informatics</span></h3>
+                        <span class="award-date">2018</span>
+                    </div>
+                    <p class="award-desc">Awarded second prize at the national Olympiad in Informatics.</p>
+                    </div>
+                </article>
+
+                <article class="award-item">
+                    <div class="award-logo"><img src="images/awards/trophy.png" alt="Trophy logo" onerror="this.style.display='none'"></div>
+                    <div>
+                    <div class="award-title-row">
+                        <h3 class="award-title">Third Prize at Vietnam Olympiad in Informatics <span class="award-org-inline">@ Vietnam Olympiad in Informatics</span></h3>
+                        <span class="award-date">2017</span>
+                    </div>
+                    <p class="award-desc">Awarded third prize at the national Olympiad in Informatics.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Ro Nguyen. Built with HTML, CSS & JS.<br>Based on the webpage style by <a href="https://itruonghai.github.io/" target="_blank" rel="noreferrer">Hai Truong-Nguyen</a>.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

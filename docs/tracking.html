@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <title>E-Ro Nguyen | Tracking</title>
+    <meta name="description" content="Personal tracking dashboard for coding progress and activity.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .tracking-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .tracking-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .tracking-card {
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            background: var(--glass-bg);
+            padding: 1rem;
+        }
+
+        .tracking-title {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        .tracking-meta {
+            color: var(--text-muted);
+            margin-bottom: 0.7rem;
+        }
+
+        .tracking-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.55rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .kpi {
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.62);
+            text-align: center;
+        }
+
+        .kpi-label {
+            color: var(--text-muted);
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .kpi-value {
+            display: block;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 0.15rem;
+        }
+
+        .tracking-bars {
+            display: grid;
+            gap: 0.52rem;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.55rem;
+            align-items: center;
+        }
+
+        .bar-main {
+            min-width: 0;
+        }
+
+        .bar-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.28rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .bar-track {
+            width: 100%;
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.28);
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 999px;
+            transition: width 0.45s ease;
+        }
+
+        .bar-fill.easy {
+            background: linear-gradient(90deg, #22c55e, #4ade80);
+        }
+
+        .bar-fill.medium {
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+        }
+
+        .bar-fill.hard {
+            background: linear-gradient(90deg, #ef4444, #f87171);
+        }
+
+        .bar-fill.gh {
+            background: linear-gradient(90deg, #0ea5e9, #06b6d4);
+        }
+
+        .bar-value {
+            font-weight: 700;
+            font-size: 0.86rem;
+            color: var(--text-primary);
+            min-width: 38px;
+            text-align: right;
+        }
+
+        .tracking-actions {
+            margin-top: 0.9rem;
+            display: flex;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+        }
+
+        .tracking-updated {
+            margin-top: 0.65rem;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+
+        .tracking-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.38rem 0.75rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        html[data-theme="dark"] .kpi {
+            background: rgba(11, 18, 32, 0.68);
+        }
+
+        @media (max-width: 820px) {
+            .tracking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./" class="logo text-gradient" style="display: flex; align-items: center; gap: 0.8rem;">
+                <img src="images/me.png" alt="E-Ro"
+                    style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;"
+                    onerror="this.style.display='none'">
+                <span style="font-size: 1.1rem; text-transform: none; letter-spacing: 0;">E-Ro Nguyen</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="publication.html">Publications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <span>Night</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section reveal active particle-section" id="tracking" data-github-user="nero1342" data-leetcode-user="nero1905" style="position: relative; overflow: visible;">
+            <canvas class="hero-particles"
+                style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+            <div class="tracking-header" style="margin-top: 2rem;">
+                <h1 class="text-gradient">Tracking</h1>
+                <p style="color: var(--text-muted); max-width: 760px; margin: 1rem auto 0;">
+                    Progress dashboard for coding practice and open-source activity.
+                </p>
+            </div>
+
+            <div class="tracking-grid">
+                <article class="tracking-card">
+                    <h2 class="tracking-title"><i class="fas fa-code text-teal"></i> LeetCode</h2>
+                    <p class="tracking-meta" id="leetcode-status">Loading live stats...</p>
+                    <div class="tracking-kpis">
+                        <div class="kpi"><span class="kpi-label">Solved</span><span class="kpi-value" id="lc-total">--</span></div>
+                        <div class="kpi"><span class="kpi-label">Acceptance</span><span class="kpi-value" id="lc-acceptance">--</span></div>
+                        <div class="kpi"><span class="kpi-label">Ranking</span><span class="kpi-value" id="lc-ranking">--</span></div>
+                    </div>
+                    <div class="tracking-bars">
+                        <div class="bar-row">
+                            <div class="bar-main">
+                                <div class="bar-label"><span>Easy</span><span id="lc-easy-label">--</span></div>
+                                <div class="bar-track"><div class="bar-fill easy" id="lc-easy-bar"></div></div>
+                            </div>
+                            <span class="bar-value" id="lc-easy-pct">--%</span>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-main">
+                                <div class="bar-label"><span>Medium</span><span id="lc-medium-label">--</span></div>
+                                <div class="bar-track"><div class="bar-fill medium" id="lc-medium-bar"></div></div>
+                            </div>
+                            <span class="bar-value" id="lc-medium-pct">--%</span>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-main">
+                                <div class="bar-label"><span>Hard</span><span id="lc-hard-label">--</span></div>
+                                <div class="bar-track"><div class="bar-fill hard" id="lc-hard-bar"></div></div>
+                            </div>
+                            <span class="bar-value" id="lc-hard-pct">--%</span>
+                        </div>
+                    </div>
+                    <div class="tracking-actions">
+                        <a class="tracking-link" id="lc-profile-link" href="https://leetcode.com/" target="_blank" rel="noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Open LeetCode</a>
+                    </div>
+                    <p class="tracking-updated" id="lc-updated">Updated: --</p>
+                </article>
+
+                <article class="tracking-card">
+                    <h2 class="tracking-title"><i class="fab fa-github text-teal"></i> GitHub Commits</h2>
+                    <p class="tracking-meta" id="github-status">Loading live stats...</p>
+                    <div class="tracking-kpis">
+                        <div class="kpi"><span class="kpi-label">Commits (30d)</span><span class="kpi-value" id="gh-commits-30">--</span></div>
+                        <div class="kpi"><span class="kpi-label">Active Repos</span><span class="kpi-value" id="gh-active-repos">--</span></div>
+                        <div class="kpi"><span class="kpi-label">Public Repos</span><span class="kpi-value" id="gh-public-repos">--</span></div>
+                    </div>
+                    <div class="tracking-bars">
+                        <div class="bar-row">
+                            <div class="bar-main">
+                                <div class="bar-label"><span>Daily commit pace</span><span id="gh-pace-label">-- / day</span></div>
+                                <div class="bar-track"><div class="bar-fill gh" id="gh-pace-bar"></div></div>
+                            </div>
+                            <span class="bar-value" id="gh-pace-pct">--%</span>
+                        </div>
+                    </div>
+                    <div class="tracking-actions">
+                        <a class="tracking-link" id="gh-profile-link" href="https://github.com/nero1342" target="_blank" rel="noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Open GitHub</a>
+                    </div>
+                    <p class="tracking-updated" id="gh-updated">Updated: --</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Ro Nguyen. Built with HTML, CSS & JS.<br>Based on the webpage style by <a href="https://itruonghai.github.io/" target="_blank" rel="noreferrer">Hai Truong-Nguyen</a>.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

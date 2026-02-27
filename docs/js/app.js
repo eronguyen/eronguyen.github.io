@@ -165,7 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
+                this.sizeBase = Math.random() * 2.8 + 1.8;
+                this.size = this.sizeBase;
+                this.sizePhase = Math.random() * Math.PI * 2;
+                this.sizeSpeed = 0.01 + Math.random() * 0.02;
+                this.sizeAmplitude = 0.2 + Math.random() * 0.55;
                 this.baseX = this.x;
                 this.baseY = this.y;
                 this.density = (Math.random() * 20) + 1;
@@ -256,6 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.x += this.vx;
                 this.y += this.vy;
                 this.angle += this.spin;
+                this.sizePhase += this.sizeSpeed;
+                const smoothPulse = Math.sin(this.sizePhase) * this.sizeAmplitude;
+                const randomJitter = (Math.random() - 0.5) * 0.08;
+                this.size = Math.max(0.45, this.sizeBase + smoothPulse + randomJitter);
 
                 // Bounce off edges
                 if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
@@ -403,6 +411,209 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Start the effect
         setTimeout(typeWriter, 1000);
+    }
+
+    // 9. Tracking Page Live Data
+    const trackingSection = document.getElementById('tracking');
+    if (trackingSection) {
+        const githubUser = (trackingSection.getAttribute('data-github-user') || 'nero1342').trim();
+        const leetcodeUser = (trackingSection.getAttribute('data-leetcode-user') || 'nero1342').trim();
+
+        const updateText = (id, value) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value;
+        };
+        const updateWidth = (id, pct) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const bounded = Math.max(0, Math.min(100, pct));
+            el.style.width = `${bounded}%`;
+        };
+        const formatNumber = (value) => {
+            if (value == null || value === '') return '--';
+            const n = Number(value);
+            if (!Number.isFinite(n)) return String(value);
+            return n.toLocaleString();
+        };
+        const asNumber = (value) => {
+            const n = Number(value);
+            return Number.isFinite(n) ? n : 0;
+        };
+        const nowLabel = () => new Date().toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+        const fetchJSON = async (url, timeoutMs = 12000) => {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            try {
+                const response = await fetch(url, { signal: controller.signal });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return await response.json();
+            } finally {
+                clearTimeout(timer);
+            }
+        };
+
+        const initGitHubTracking = async () => {
+            const ghProfileLink = document.getElementById('gh-profile-link');
+            if (ghProfileLink) ghProfileLink.href = `https://github.com/${githubUser}`;
+
+            try {
+                const [profile, events] = await Promise.all([
+                    fetchJSON(`https://api.github.com/users/${githubUser}`),
+                    fetchJSON(`https://api.github.com/users/${githubUser}/events/public?per_page=100`)
+                ]);
+
+                const now = Date.now();
+                const thirtyDaysAgo = now - (30 * 24 * 60 * 60 * 1000);
+                const recentEvents = Array.isArray(events)
+                    ? events.filter((event) => new Date(event.created_at).getTime() >= thirtyDaysAgo)
+                    : [];
+
+                let commitCount30 = 0;
+                const activeRepoSet = new Set();
+
+                recentEvents.forEach((event) => {
+                    if (event.type !== 'PushEvent') return;
+                    const repoName = event.repo && event.repo.name ? event.repo.name : '';
+                    activeRepoSet.add(repoName);
+                    const commits = (event.payload && Array.isArray(event.payload.commits))
+                        ? event.payload.commits.length
+                        : 0;
+                    commitCount30 += commits;
+                });
+
+                updateText('gh-commits-30', String(commitCount30));
+                updateText('gh-active-repos', String(Array.from(activeRepoSet).filter(Boolean).length));
+                const publicRepos = (profile && profile.public_repos != null) ? profile.public_repos : '--';
+                updateText('gh-public-repos', String(publicRepos));
+                updateText('github-status', `Live data for @${githubUser}`);
+
+                const dailyPace = commitCount30 / 30;
+                const pacePercent = Math.min(100, (dailyPace / 5) * 100);
+                updateText('gh-pace-label', `${dailyPace.toFixed(1)} / day`);
+                updateText('gh-pace-pct', `${Math.round(pacePercent)}%`);
+                updateWidth('gh-pace-bar', pacePercent);
+                updateText('gh-updated', `Updated: ${nowLabel()}`);
+            } catch (error) {
+                updateText('gh-commits-30', '--');
+                updateText('gh-active-repos', '--');
+                updateText('gh-public-repos', '--');
+                updateText('gh-pace-label', '-- / day');
+                updateText('gh-pace-pct', '--%');
+                updateWidth('gh-pace-bar', 0);
+                updateText('github-status', 'Live data unavailable right now.');
+                updateText('gh-updated', 'Updated: --');
+            }
+        };
+
+        const initLeetCodeTracking = async () => {
+            const lcProfileLink = document.getElementById('lc-profile-link');
+            if (lcProfileLink) lcProfileLink.href = `https://leetcode.com/u/${leetcodeUser}/`;
+
+            try {
+                // Primary source requested by user: noworneverev/leetcode-api
+                const data = await fetchJSON(`https://leetcode-api-pied.vercel.app/user/${leetcodeUser}`);
+
+                const profile = data && data.profile ? data.profile : {};
+                const totals = data && data.totals ? data.totals : {};
+                const solved = data && data.solved ? data.solved : {};
+                const stats = data && data.stats ? data.stats : {};
+
+                const easySolved = (
+                    solved.easy != null ? solved.easy :
+                    stats.easySolved != null ? stats.easySolved :
+                    data.easySolved != null ? data.easySolved :
+                    '--'
+                );
+                const mediumSolved = (
+                    solved.medium != null ? solved.medium :
+                    stats.mediumSolved != null ? stats.mediumSolved :
+                    data.mediumSolved != null ? data.mediumSolved :
+                    '--'
+                );
+                const hardSolved = (
+                    solved.hard != null ? solved.hard :
+                    stats.hardSolved != null ? stats.hardSolved :
+                    data.hardSolved != null ? data.hardSolved :
+                    '--'
+                );
+                const totalSolved = (
+                    solved.total != null ? solved.total :
+                    stats.totalSolved != null ? stats.totalSolved :
+                    data.totalSolved != null ? data.totalSolved :
+                    (asNumber(easySolved) + asNumber(mediumSolved) + asNumber(hardSolved))
+                );
+                const easyTotal = asNumber(
+                    totals.easy != null ? totals.easy :
+                    stats.totalEasy != null ? stats.totalEasy :
+                    data.totalEasy
+                );
+                const mediumTotal = asNumber(
+                    totals.medium != null ? totals.medium :
+                    stats.totalMedium != null ? stats.totalMedium :
+                    data.totalMedium
+                );
+                const hardTotal = asNumber(
+                    totals.hard != null ? totals.hard :
+                    stats.totalHard != null ? stats.totalHard :
+                    data.totalHard
+                );
+                const rawAcceptance = (
+                    profile.acceptanceRate != null ? profile.acceptanceRate :
+                    stats.acceptanceRate != null ? stats.acceptanceRate :
+                    data.acceptanceRate
+                );
+                const acceptanceRate = (rawAcceptance != null && rawAcceptance !== '')
+                    ? `${rawAcceptance}%`
+                    : '--';
+                const ranking = (
+                    profile.ranking != null ? profile.ranking :
+                    stats.ranking != null ? stats.ranking :
+                    data.ranking
+                );
+
+                const easySolvedNum = asNumber(easySolved);
+                const mediumSolvedNum = asNumber(mediumSolved);
+                const hardSolvedNum = asNumber(hardSolved);
+
+                const easyPct = easyTotal > 0 ? (easySolvedNum / easyTotal) * 100 : 0;
+                const mediumPct = mediumTotal > 0 ? (mediumSolvedNum / mediumTotal) * 100 : 0;
+                const hardPct = hardTotal > 0 ? (hardSolvedNum / hardTotal) * 100 : 0;
+
+                updateText('lc-total', formatNumber(totalSolved));
+                updateText('lc-acceptance', acceptanceRate);
+                updateText('lc-ranking', formatNumber(ranking));
+                updateText('lc-easy-label', `${formatNumber(easySolvedNum)}${easyTotal > 0 ? ` / ${formatNumber(easyTotal)}` : ''}`);
+                updateText('lc-medium-label', `${formatNumber(mediumSolvedNum)}${mediumTotal > 0 ? ` / ${formatNumber(mediumTotal)}` : ''}`);
+                updateText('lc-hard-label', `${formatNumber(hardSolvedNum)}${hardTotal > 0 ? ` / ${formatNumber(hardTotal)}` : ''}`);
+                updateText('lc-easy-pct', `${Math.round(easyPct)}%`);
+                updateText('lc-medium-pct', `${Math.round(mediumPct)}%`);
+                updateText('lc-hard-pct', `${Math.round(hardPct)}%`);
+                updateWidth('lc-easy-bar', easyPct);
+                updateWidth('lc-medium-bar', mediumPct);
+                updateWidth('lc-hard-bar', hardPct);
+                updateText('leetcode-status', `Live data for @${leetcodeUser}`);
+                updateText('lc-updated', `Updated: ${nowLabel()}`);
+            } catch (error) {
+                updateText('lc-total', '--');
+                updateText('lc-acceptance', '--');
+                updateText('lc-ranking', '--');
+                updateText('lc-easy-label', '--');
+                updateText('lc-medium-label', '--');
+                updateText('lc-hard-label', '--');
+                updateText('lc-easy-pct', '--%');
+                updateText('lc-medium-pct', '--%');
+                updateText('lc-hard-pct', '--%');
+                updateWidth('lc-easy-bar', 0);
+                updateWidth('lc-medium-bar', 0);
+                updateWidth('lc-hard-bar', 0);
+                updateText('leetcode-status', 'Live data unavailable right now.');
+                updateText('lc-updated', 'Updated: --');
+            }
+        };
+
+        initGitHubTracking();
+        initLeetCodeTracking();
     }
 
 });
