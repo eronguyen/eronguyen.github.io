@@ -115,11 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
 
     // 6. Hero Particle System
-    const canvas = document.getElementById('hero-particles');
-    if (canvas) {
+    const particleCanvases = document.querySelectorAll('.hero-particles');
+    particleCanvases.forEach((canvas) => {
         const ctx = canvas.getContext('2d');
         let particles = [];
-        let numParticles = window.innerWidth < 768 ? 80 : 150;
+        const getBaseParticleCount = () => {
+            const isMobile = window.innerWidth < 768;
+            if (particleCanvases.length > 1) return isMobile ? 26 : 48;
+            return isMobile ? 70 : 130;
+        };
+        let numParticles = getBaseParticleCount();
 
         const mouse = {
             x: null,
@@ -127,15 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
             radius: 150
         };
 
-        // Capture mouse over the parent section
-        const heroSection = document.getElementById('about');
-        heroSection.addEventListener('mousemove', function (event) {
+        // Capture mouse over the container that owns this canvas.
+        const particleHost = canvas.parentElement;
+        particleHost.addEventListener('mousemove', function (event) {
             const rect = canvas.getBoundingClientRect();
             mouse.x = event.clientX - rect.left;
             mouse.y = event.clientY - rect.top;
         });
 
-        heroSection.addEventListener('mouseleave', function () {
+        particleHost.addEventListener('mouseleave', function () {
             mouse.x = null;
             mouse.y = null;
         });
@@ -145,10 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const parent = canvas.parentElement;
             canvas.width = parent.offsetWidth;
             canvas.height = parent.offsetHeight;
+            const base = getBaseParticleCount();
+            const areaScale = Math.sqrt((canvas.width * canvas.height) / (1280 * 720));
+            const scaled = Math.round(base * Math.max(0.8, Math.min(1.4, areaScale)));
+            numParticles = Math.max(22, Math.min(180, scaled));
         }
         window.addEventListener('resize', () => {
             resize();
-            numParticles = window.innerWidth < 768 ? 40 : 80;
             init();
         });
         resize();
@@ -163,20 +171,91 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.density = (Math.random() * 20) + 1;
                 this.vx = (Math.random() - 0.5) * 0.5;
                 this.vy = (Math.random() - 0.5) * 0.5;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spin = (Math.random() - 0.5) * 0.04;
+                this.shape = this.pickShape();
+                this.color = this.pickColor();
+            }
+
+            pickShape() {
+                const r = Math.random();
+                if (r < 0.34) return 'circle';
+                if (r < 0.54) return 'diamond';
+                if (r < 0.74) return 'triangle';
+                if (r < 0.9) return 'plus';
+                return 'ring';
+            }
+
+            pickColor() {
+                const palette = [
+                    'rgba(14, 165, 233, 0.55)',
+                    'rgba(6, 182, 212, 0.5)',
+                    'rgba(56, 189, 248, 0.5)',
+                    'rgba(13, 148, 136, 0.48)'
+                ];
+                return palette[Math.floor(Math.random() * palette.length)];
             }
 
             draw() {
-                ctx.fillStyle = 'rgba(14, 165, 233, 0.4)'; // Academic blue
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle);
+                ctx.shadowColor = 'rgba(14, 165, 233, 0.35)';
+                ctx.shadowBlur = 8;
+
+                if (this.shape === 'circle') {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if (this.shape === 'diamond') {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.size * 1.5);
+                    ctx.lineTo(this.size * 1.15, 0);
+                    ctx.lineTo(0, this.size * 1.5);
+                    ctx.lineTo(-this.size * 1.15, 0);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if (this.shape === 'triangle') {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.size * 1.7);
+                    ctx.lineTo(this.size * 1.45, this.size * 1.3);
+                    ctx.lineTo(-this.size * 1.45, this.size * 1.3);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if (this.shape === 'plus') {
+                    const w = Math.max(1, this.size * 0.65);
+                    const l = this.size * 1.8;
+                    ctx.strokeStyle = this.color;
+                    ctx.lineWidth = w;
+                    ctx.lineCap = 'round';
+                    ctx.beginPath();
+                    ctx.moveTo(-l, 0);
+                    ctx.lineTo(l, 0);
+                    ctx.moveTo(0, -l);
+                    ctx.lineTo(0, l);
+                    ctx.stroke();
+                    ctx.closePath();
+                } else {
+                    ctx.strokeStyle = this.color;
+                    ctx.lineWidth = Math.max(1, this.size * 0.5);
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size * 1.5, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+
+                ctx.restore();
             }
 
             update() {
                 // Natural movement
                 this.x += this.vx;
                 this.y += this.vy;
+                this.angle += this.spin;
 
                 // Bounce off edges
                 if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
@@ -187,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let dx = mouse.x - this.x;
                     let dy = mouse.y - this.y;
                     let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance === 0) return;
                     let forceDirectionX = dx / distance;
                     let forceDirectionY = dy / distance;
                     let maxDistance = mouse.radius;
@@ -251,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         init();
         animateCanvas();
-    }
+    });
 
     // 7. 3D Tilt Effect on Profile Image
     const profileContainer = document.querySelector('.profile-image-container');
