@@ -476,9 +476,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (ghProfileLink) ghProfileLink.href = `https://github.com/${githubUser}`;
 
             try {
-                const [profile, events] = await Promise.all([
+                const [profile, events, repos] = await Promise.all([
                     fetchJSON(`https://api.github.com/users/${githubUser}`),
-                    fetchJSON(`https://api.github.com/users/${githubUser}/events/public?per_page=100`)
+                    fetchJSON(`https://api.github.com/users/${githubUser}/events/public?per_page=100`),
+                    fetchJSON(`https://api.github.com/users/${githubUser}/repos?per_page=100&sort=updated`)
                 ]);
 
                 const now = Date.now();
@@ -489,6 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let commitCount30 = 0;
                 const activeRepoSet = new Set();
+                const repoCommitMap = new Map();
 
                 recentEvents.forEach((event) => {
                     if (event.type !== 'PushEvent') return;
@@ -498,6 +500,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         ? event.payload.commits.length
                         : 0;
                     commitCount30 += commits;
+                    if (repoName) {
+                        repoCommitMap.set(repoName, (repoCommitMap.get(repoName) || 0) + commits);
+                    }
                 });
 
                 updateText('gh-commits-30', String(commitCount30));
@@ -505,6 +510,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 const publicRepos = (profile && profile.public_repos != null) ? profile.public_repos : '--';
                 updateText('gh-public-repos', String(publicRepos));
                 updateText('github-status', `Live data for @${githubUser}`);
+                updateText('gh-name', `@${githubUser}`);
+                updateText('gh-followers', formatNumber(profile && profile.followers != null ? profile.followers : '--'));
+                updateText('gh-following', formatNumber(profile && profile.following != null ? profile.following : '--'));
+                const avatarEl = document.getElementById('gh-avatar');
+                if (avatarEl && profile && profile.avatar_url) avatarEl.src = profile.avatar_url;
+
+                const languageCount = {};
+                if (Array.isArray(repos)) {
+                    repos.forEach((repo) => {
+                        const lang = repo && repo.language ? repo.language : null;
+                        if (!lang) return;
+                        languageCount[lang] = (languageCount[lang] || 0) + 1;
+                    });
+                }
+                const topLanguage = Object.entries(languageCount).sort((a, b) => b[1] - a[1])[0];
+                updateText('gh-language', topLanguage ? `Language: ${topLanguage[0]}` : 'Language: --');
 
                 const dailyPace = commitCount30 / 30;
                 const pacePercent = Math.min(100, (dailyPace / 5) * 100);
@@ -512,15 +533,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateText('gh-pace-pct', `${Math.round(pacePercent)}%`);
                 updateWidth('gh-pace-bar', pacePercent);
                 updateText('gh-updated', `Updated: ${nowLabel()}`);
+
+                const repoListEl = document.getElementById('gh-repo-list');
+                if (repoListEl) {
+                    const topRepos = Array.from(repoCommitMap.entries())
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5);
+
+                    if (topRepos.length === 0) {
+                        repoListEl.innerHTML = '<li class="gh-repo-item"><span class="gh-repo-name">No recent push activity</span><span class="gh-repo-count">0</span></li>';
+                    } else {
+                        repoListEl.innerHTML = topRepos.map(([fullName, count]) => {
+                            const repoShort = fullName.includes('/') ? fullName.split('/').pop() : fullName;
+                            return `<li class="gh-repo-item"><span class="gh-repo-name">${repoShort}</span><span class="gh-repo-count">${count}</span></li>`;
+                        }).join('');
+                    }
+                }
             } catch (error) {
                 updateText('gh-commits-30', '--');
                 updateText('gh-active-repos', '--');
                 updateText('gh-public-repos', '--');
+                updateText('gh-name', `@${githubUser}`);
+                updateText('gh-followers', '--');
+                updateText('gh-following', '--');
+                updateText('gh-language', 'Language: --');
                 updateText('gh-pace-label', '-- / day');
                 updateText('gh-pace-pct', '--%');
                 updateWidth('gh-pace-bar', 0);
                 updateText('github-status', 'Live data unavailable right now.');
                 updateText('gh-updated', 'Updated: --');
+                const repoListEl = document.getElementById('gh-repo-list');
+                if (repoListEl) {
+                    repoListEl.innerHTML = '<li class="gh-repo-item"><span class="gh-repo-name">Could not load repositories</span><span class="gh-repo-count">--</span></li>';
+                }
             }
         };
 
@@ -630,8 +675,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
+        const initVisitorTracking = () => {
+            const statusEl = document.getElementById('visitor-status');
+            const mapContainer = document.getElementById('visitor-map-container');
+            const noteEl = document.getElementById('visitor-note');
+            const clustrToken = (trackingSection.getAttribute('data-clustrmaps-token') || '').trim();
+
+            if (!mapContainer || !statusEl) return;
+
+            if (!clustrToken) {
+                statusEl.textContent = 'Visitor map is not configured yet.';
+                if (noteEl) {
+                    noteEl.innerHTML = 'Add your ClustrMaps token to <code>data-clustrmaps-token</code> in <code>tracking.html</code>.';
+                }
+                return;
+            }
+
+            try {
+                mapContainer.innerHTML = '';
+                const script = document.createElement('script');
+                script.id = 'clustrmaps';
+                script.async = true;
+                script.src = `https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=900&t=tt&d=${encodeURIComponent(clustrToken)}&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
+
+                script.onload = () => {
+                    statusEl.textContent = 'Live global visitor map loaded.';
+                    if (noteEl) noteEl.textContent = 'Map and visit counts are provided by ClustrMaps.';
+                };
+                script.onerror = () => {
+                    statusEl.textContent = 'Could not load visitor map right now.';
+                    if (noteEl) noteEl.textContent = 'Check your token or network settings.';
+                };
+
+                mapContainer.appendChild(script);
+            } catch (error) {
+                statusEl.textContent = 'Could not initialize visitor map.';
+                if (noteEl) noteEl.textContent = 'Please verify the widget configuration.';
+            }
+        };
+
         initGitHubTracking();
-        initLeetCodeTracking();
+        const leetCardImage = document.getElementById('leetcode-card-image');
+        if (!leetCardImage) {
+            initLeetCodeTracking();
+        }
+        initVisitorTracking();
     }
 
 });
