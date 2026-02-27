@@ -323,10 +323,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     let dy = particles[i].y - particles[j].y;
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
-                    if (distance < 80) {
+                    if (distance < 130) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(14, 165, 233, ${0.1 - distance / 800})`; // Faint connections
-                        ctx.lineWidth = 1;
+                        ctx.strokeStyle = `rgba(14, 165, 233, ${0.2 - distance / 900})`; // Faint but visible connections
+                        ctx.lineWidth = 1.8;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
