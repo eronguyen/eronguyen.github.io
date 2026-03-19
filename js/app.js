@@ -369,6 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typeWriterElement = document.querySelector('.typewriter-text');
     if (typeWriterElement) {
         const phrases = [
+            "Incoming Research Scientist Intern @ Adobe",
             "CS Ph.D. Student @ Stony Brook University",
             "Vision & Robotics Researcher",
         ];
