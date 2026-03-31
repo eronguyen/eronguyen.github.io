@@ -432,6 +432,69 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const initVisitorTracking = () => {
+        const statusEl = document.getElementById('visitor-status');
+        const mapContainer = document.getElementById('visitor-map-container');
+        const noteEl = document.getElementById('visitor-note');
+        const visitorHost = mapContainer ? mapContainer.closest('[data-clustrmaps-token]') : null;
+        const clustrToken = visitorHost
+            ? (visitorHost.getAttribute('data-clustrmaps-token') || '').trim()
+            : '';
+        const widgetType = visitorHost
+            ? ((visitorHost.getAttribute('data-clustrmaps-widget') || 'map').trim().toLowerCase())
+            : 'map';
+        const isGlobe = widgetType === 'globe';
+
+        if (!mapContainer || !statusEl) return;
+
+        if (!clustrToken) {
+            statusEl.textContent = isGlobe
+                ? 'Visitor globe is not configured yet.'
+                : 'Visitor map is not configured yet.';
+            if (noteEl) {
+                noteEl.innerHTML = 'Add your ClustrMaps token to <code>data-clustrmaps-token</code> on the section containing this widget.';
+            }
+            return;
+        }
+
+        try {
+            statusEl.textContent = isGlobe
+                ? 'Loading live visitor globe...'
+                : 'Loading live global visitor map...';
+            mapContainer.innerHTML = '';
+            const script = document.createElement('script');
+            script.id = isGlobe ? 'clstr_globe' : 'clustrmaps';
+            script.async = true;
+            script.src = isGlobe
+                ? `https://clustrmaps.com/globe.js?d=${encodeURIComponent(clustrToken)}`
+                : `https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=900&t=tt&d=${encodeURIComponent(clustrToken)}&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
+
+            script.onload = () => {
+                statusEl.textContent = isGlobe
+                    ? 'Live visitor globe loaded.'
+                    : 'Live global visitor map loaded.';
+                if (noteEl) {
+                    noteEl.textContent = isGlobe
+                        ? 'Globe and visit counts are provided by ClustrMaps.'
+                        : 'Map and visit counts are provided by ClustrMaps.';
+                }
+            };
+            script.onerror = () => {
+                statusEl.textContent = isGlobe
+                    ? 'Could not load visitor globe right now.'
+                    : 'Could not load visitor map right now.';
+                if (noteEl) noteEl.textContent = 'Check your ClustrMaps token or network settings.';
+            };
+
+            mapContainer.appendChild(script);
+        } catch (error) {
+            statusEl.textContent = isGlobe
+                ? 'Could not initialize visitor globe.'
+                : 'Could not initialize visitor map.';
+            if (noteEl) noteEl.textContent = 'Please verify the widget configuration.';
+        }
+    };
+
     // 10. Tracking Page Live Data
     const trackingSection = document.getElementById('tracking');
     if (trackingSection) {
@@ -676,51 +739,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        const initVisitorTracking = () => {
-            const statusEl = document.getElementById('visitor-status');
-            const mapContainer = document.getElementById('visitor-map-container');
-            const noteEl = document.getElementById('visitor-note');
-            const clustrToken = (trackingSection.getAttribute('data-clustrmaps-token') || '').trim();
-
-            if (!mapContainer || !statusEl) return;
-
-            if (!clustrToken) {
-                statusEl.textContent = 'Visitor map is not configured yet.';
-                if (noteEl) {
-                    noteEl.innerHTML = 'Add your ClustrMaps token to <code>data-clustrmaps-token</code> in <code>tracking.html</code>.';
-                }
-                return;
-            }
-
-            try {
-                mapContainer.innerHTML = '';
-                const script = document.createElement('script');
-                script.id = 'clustrmaps';
-                script.async = true;
-                script.src = `https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=900&t=tt&d=${encodeURIComponent(clustrToken)}&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
-
-                script.onload = () => {
-                    statusEl.textContent = 'Live global visitor map loaded.';
-                    if (noteEl) noteEl.textContent = 'Map and visit counts are provided by ClustrMaps.';
-                };
-                script.onerror = () => {
-                    statusEl.textContent = 'Could not load visitor map right now.';
-                    if (noteEl) noteEl.textContent = 'Check your token or network settings.';
-                };
-
-                mapContainer.appendChild(script);
-            } catch (error) {
-                statusEl.textContent = 'Could not initialize visitor map.';
-                if (noteEl) noteEl.textContent = 'Please verify the widget configuration.';
-            }
-        };
-
         initGitHubTracking();
         const leetCardImage = document.getElementById('leetcode-card-image');
         if (!leetCardImage) {
             initLeetCodeTracking();
         }
-        initVisitorTracking();
     }
+
+    initVisitorTracking();
 
 });

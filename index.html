@@ -209,6 +209,85 @@
       letter-spacing: 0.06em;
     }
 
+    .hero-visitor-card {
+      width: min(100%, 360px);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: var(--glass-shadow);
+      padding: 0.95rem;
+      text-align: left;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero-visitor-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-visitor-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .hero-visitor-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .hero-visitor-status {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .visitor-map-wrap {
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 0.45rem;
+      min-height: 220px;
+    }
+
+    .visitor-map-inner {
+      width: 100%;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .tracking-note {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 0.55rem;
+    }
+
+    .visitor-section-card {
+      width: 100%;
+      max-width: none;
+    }
+
+    .visitor-section-card .visitor-map-wrap {
+      min-height: 280px;
+    }
+
+    .visitor-section-card .visitor-map-inner {
+      min-height: 260px;
+    }
+
     .timeline-list {
       display: grid;
       gap: 1.25rem;
@@ -349,6 +428,16 @@
       color: #c8ecff;
       background: linear-gradient(90deg, rgba(14, 165, 233, 0.34), rgba(13, 148, 136, 0.28));
       border-color: rgba(94, 234, 212, 0.42);
+    }
+
+    html[data-theme="dark"] .hero-visitor-card {
+      background: rgba(10, 19, 34, 0.88);
+      border-color: rgba(148, 163, 184, 0.35);
+    }
+
+    html[data-theme="dark"] .visitor-map-wrap {
+      background: rgba(11, 18, 32, 0.68);
+      border-color: rgba(148, 163, 184, 0.24);
     }
 
     html[data-theme="dark"] .news-icon {
@@ -516,7 +605,6 @@
               <img src="images/me.png" alt="Portrait of E-Ro Nguyen" class="profile-image" onerror="this.style.display='none'">
             </div>
           </div>
-          
         </div>
       </div>
 
@@ -556,18 +644,6 @@
             <p class="news-text news-line"><span class="news-date">Feb 21, 2026</span> <a href="https://eronguyen.github.io/DAWN/" target="_blank" rel="noreferrer">DAWN</a> has been accepted to CVPR 2026.</p>
           </div>
         </article>
-        <!-- <article class="news-item">
-          <div class="news-icon">📄</div>
-          <div>
-            <p class="news-text news-line"><span class="news-date">Sep 26, 2025</span> My recent work <a href="https://eronguyen.github.io/DAWN/" target="_blank" rel="noreferrer">DAWN</a> is now on arXiv.</p>
-          </div>
-        </article> -->
-        <!-- <article class="news-item">
-          <div class="news-icon">🚀</div>
-          <div>
-            <p class="news-text news-line"><span class="news-date">Nov 24, 2024</span> <a href="https://eronguyen.me/InstAlign/" target="_blank" rel="noreferrer">InstAlign</a> is now on arXiv.</p>
-          </div>
-        </article> -->
         <article class="news-item">
           <div class="news-icon">🎉</div>
           <div>
@@ -596,6 +672,25 @@
         <button class="carousel-btn left" onclick="scrollCarousel(-1)" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
 
         <div class="projects-grid" id="projectsCarousel">
+          <article class="paper-card paper-card-link" data-card-url="https://eronguyen.github.io/InstAlign/" tabindex="0" role="link" aria-label="Open InstAlign project page">
+            <div class="paper-card-image">
+              <span class="badge">CVPR 2026 Workshop</span>
+              <img src="images/publications/InstAlign.png" alt="InstAlign paper teaser" onerror="this.src='https://placehold.co/960x540/06b6d4/ffffff?text=InstAlign'">
+            </div>
+            <div class="paper-card-text">
+              <div class="paper-card-top">
+                <a class="paper-card-title" href="https://eronguyen.github.io/InstAlign/" target="_blank" rel="noreferrer">Phrase-Instance Alignment for Generalized Referring Segmentation</a>
+                <p class="paper-card-authors"><strong>E-Ro Nguyen</strong>, Hieu Le, Dimitris Samaras, Michael S. Ryoo</p>
+              </div>
+              <p class="paper-card-desc">A generalized instance-aware alignment framework for robust referring expression segmentation.</p>
+              <div class="paper-card-actions">
+                <a class="paper-card-btn" href="https://arxiv.org/pdf/2411.15087" target="_blank" rel="noreferrer"><i class="fas fa-file-alt"></i> Paper</a>
+                <a class="paper-card-btn" href="https://eronguyen.me/InstAlign/" target="_blank" rel="noreferrer"><i class="fas fa-globe"></i> Project</a>
+                <a class="paper-card-btn" href="https://github.com/nero1342/InstAlign" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
           <article class="paper-card paper-card-link" data-card-url="https://eronguyen.github.io/DAWN/" tabindex="0" role="link" aria-label="Open DAWN project page">
             <div class="paper-card-image">
               <span class="badge">CVPR 2026</span>
@@ -615,24 +710,7 @@
             </div>
           </article>
 
-          <article class="paper-card paper-card-link" data-card-url="https://eronguyen.me/InstAlign/" tabindex="0" role="link" aria-label="Open InstAlign project page">
-            <div class="paper-card-image">
-              <span class="badge">arXiv 2025</span>
-              <img src="images/publications/InstAlign.png" alt="InstAlign paper teaser" onerror="this.src='https://placehold.co/960x540/06b6d4/ffffff?text=InstAlign'">
-            </div>
-            <div class="paper-card-text">
-              <div class="paper-card-top">
-                <a class="paper-card-title" href="https://eronguyen.github.io/InstAlign/" target="_blank" rel="noreferrer">Instance-Aware Generalized Referring Expression Segmentation</a>
-                <p class="paper-card-authors"><strong>E-Ro Nguyen</strong>, Hieu Le, Dimitris Samaras, Michael S. Ryoo</p>
-              </div>
-              <p class="paper-card-desc">A generalized instance-aware alignment framework for robust referring expression segmentation.</p>
-              <div class="paper-card-actions">
-                <a class="paper-card-btn" href="https://arxiv.org/pdf/2411.15087" target="_blank" rel="noreferrer"><i class="fas fa-file-alt"></i> Paper</a>
-                <a class="paper-card-btn" href="https://eronguyen.me/InstAlign/" target="_blank" rel="noreferrer"><i class="fas fa-globe"></i> Project</a>
-                <a class="paper-card-btn" href="https://github.com/nero1342/InstAlign" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-          </article>
+          
 
           <article class="paper-card paper-card-link" data-card-url="https://vatex.hkustvgd.com/" tabindex="0" role="link" aria-label="Open VATEX project page">
             <div class="paper-card-image">
@@ -663,6 +741,26 @@
       <h2 style="font-size:2.1rem;border-bottom:2px solid var(--glass-border);padding-bottom:0.5rem;margin-bottom:1.6rem;">Research Experience</h2>
       <div class="glass-card">
         <div class="timeline-list">
+          <article class="timeline-entry">
+            <div class="exp-head">
+              <div class="exp-main">
+                <img class="exp-logo" src="images/experience/adobe.png" alt="Adobe logo" onerror="this.style.display='none'">
+                <h3>Research Scientist Intern @ Adobe, San Jose, CA, USA</h3>
+              </div>
+              <div class="timeline-meta-row">
+                <span>May 2026 - Present</span>
+              </div>
+            </div>
+            <p>Pending...</p>
+            <!-- <p>Working on computer vision and multimodal learning for language-conditioned robot control.</p>
+            <p>
+              Advisors:
+              <a href="http://michaelryoo.com" target="_blank" rel="noreferrer">Prof. Michael Ryoo</a>
+              and
+              <a href="https://scholar.google.com/citations?user=BxbKTYkAAAAJ&hl=en" target="_blank" rel="noreferrer">Prof. Dimitris Samaras</a>
+            </p> -->
+          </article>
+
           <article class="timeline-entry">
             <div class="exp-head">
               <div class="exp-main">
@@ -721,7 +819,25 @@
       </div>
     </section>
 
+    <section class="section reveal particle-section" id="visitors" data-clustrmaps-token="ZzRxsOp5rZ5QFs8h9KGsD1yd2LopnHItYIqlHA5QWsE" style="position: relative; overflow: visible; isolation: isolate;">
+      <canvas class="hero-particles" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+      <article class="hero-visitor-card visitor-section-card">
+        <div class="hero-visitor-head">
+          <span class="hero-visitor-title"><i class="fas fa-earth-americas text-teal"></i> Site Visitors</span>
+          <!-- <a class="hero-visitor-link" href="tracking.html">Open tracking</a> -->
+        </div>
+        <p class="hero-visitor-status" id="visitor-status">Loading live visitor globe...</p>
+        <div class="visitor-map-wrap">
+          <div class="visitor-map-inner" id="visitor-map-container">
+            Visitor globe will appear here.
+          </div>
+        </div>
+        <p class="tracking-note" id="visitor-note">Globe and visit counts are provided by ClustrMaps.</p>
+      </article>
+    </section>
   </main>
+
+  
 
   <footer>
     <p>&copy; 2026 E-Ro Nguyen. Built with HTML, CSS & JS.<br>Based on the webpage style by <a href="https://itruonghai.github.io/" target="_blank" rel="noreferrer">Hai Truong-Nguyen</a>.</p>
