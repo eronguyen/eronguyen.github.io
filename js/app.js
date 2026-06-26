@@ -467,7 +467,9 @@ document.addEventListener('DOMContentLoaded', () => {
             script.async = true;
             script.src = isGlobe
                 ? `https://mapmyvisitors.com/globe.js?d=${encodeURIComponent(clustrToken)}`
-                : `https://cdn.mapmyvisitors.com/map_v2.js?cl=ffffff&w=900&t=tt&d=${encodeURIComponent(clustrToken)}&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
+                :`https://mapmyvisitors.com/map.js?d=${encodeURIComponent(clustrToken)}&cl=ffffff&w=900&t=tt&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
+                // : : 
+                // `https://cdn.mapmyvisitors.com/map_v2.js?cl=ffffff&w=900&t=tt&d=${encodeURIComponent(clustrToken)}&co=0b1220&ct=ffffff&cmo=3acc3a&cmn=ff5353`;
 
             script.onload = () => {
                 statusEl.textContent = isGlobe
