@@ -276,16 +276,17 @@
     }
 
     .visitor-section-card {
-      width: 100%;
-      max-width: none;
+      width: min(100%, 380px);
+      margin: 0 auto;
     }
 
     .visitor-section-card .visitor-map-wrap {
-      min-height: 280px;
+      min-height: 220px;
+      padding: 0.3rem;
     }
 
     .visitor-section-card .visitor-map-inner {
-      min-height: 260px;
+      min-height: 190px;
     }
 
     .timeline-list {
@@ -619,6 +620,14 @@
       <!-- <p style="color:var(--text-muted);margin-bottom:1rem;">Recent updates and milestones.</p> -->
       <div class="news-board">
         <article class="news-item">
+          <div class="news-icon">🏆</div>
+          <div>
+            <p class="news-text news-line"><span class="news-date">Jun 17, 2026</span> <a href="https://arxiv.org/pdf/2505.22850?" target="_blank" rel="noreferrer">C-REX</a> has been accepted to ECCV 2026. </p>
+          </div>
+        </article>
+        
+        
+        <article class="news-item">
           <div class="news-icon">💼</div>
           <div>
             <p class="news-text news-line">
@@ -751,14 +760,18 @@
                 <span>May 2026 - Present</span>
               </div>
             </div>
-            <p>Pending...</p>
-            <!-- <p>Working on computer vision and multimodal learning for language-conditioned robot control.</p>
+            <!-- <p>Pending...</p> -->
+            <p>Working on multi-stream human motion fusion & generation.</p>
             <p>
-              Advisors:
-              <a href="http://michaelryoo.com" target="_blank" rel="noreferrer">Prof. Michael Ryoo</a>
-              and
-              <a href="https://scholar.google.com/citations?user=BxbKTYkAAAAJ&hl=en" target="_blank" rel="noreferrer">Prof. Dimitris Samaras</a>
-            </p> -->
+              Mentors:
+              <a href="https://laiviet.github.io/" target="_blank" rel="noreferrer">Viet Lai</a>,
+              <a href="https://subhojyoti.github.io/" target="_blank" rel="noreferrer">Subhojyoti Mukherjee</a>,
+              <a href="http://mai-t-long.com/" target="_blank" rel="noreferrer">Long Mai</a>, 
+              <a href="https://research.adobe.com/person/franck-dernoncourt/" target="_blank" rel="noreferrer">Franck Dernoncourt</a>, 
+              <a href="https://sites.google.com/site/trungbuistanford/" target="_blank" rel="noreferrer">Trung Bui</a>,
+              <a href="https://bkveton.com/" target="_blank" rel="noreferrer">Brano Kveton</a>
+              
+            </p>
           </article>
 
           <article class="timeline-entry">
@@ -819,7 +832,7 @@
       </div>
     </section>
 
-    <section class="section reveal particle-section" id="visitors" data-clustrmaps-token="ZzRxsOp5rZ5QFs8h9KGsD1yd2LopnHItYIqlHA5QWsE" style="position: relative; overflow: visible; isolation: isolate;">
+    <section class="section reveal particle-section" id="visitors" data-clustrmaps-token="ZzRxsOp5rZ5QFs8h9KGsD1yd2LopnHItYIqlHA5QWsE" data-clustrmaps-widget="globe" style="position: relative; overflow: visible; isolation: isolate;">
       <canvas class="hero-particles" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
       <article class="hero-visitor-card visitor-section-card">
         <div class="hero-visitor-head">
